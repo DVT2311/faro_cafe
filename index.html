@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="author" content="Sarab">
+      <meta name="description" content="Sarab - Fast Food & Restaurant HTML Template">
+      <title>Sarab - Fast Food & Restaurant HTML Template</title>
+      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet"/>
+      <!-- Bootstrap 5.3 -->
+      <link href="css/bootstrap.min.css" rel="stylesheet"/>
+      <!-- AOS Animate on Scroll -->
+      <link href="css/aos.css" rel="stylesheet"/>
+      <!-- Swiper -->
+      <link href="css/swiper-bundle.min.css" rel="stylesheet"/>
+      <!-- all min css -->
+      <link rel="stylesheet" href="css/all.min.css"/>
+      <!-- magnific CSS -->
+      <link rel="stylesheet" href="css/magnific-popup.css"/>
+      <!-- Style CSS -->
+      <link rel="stylesheet" href="css/style.css" />
+   </head>
+   <body>
+      <!-- ============================================================
+         TOP BAR
+         ============================================================ -->
+      <div id="topbar">
+         <div class="container">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+               <div class="top-contact d-flex flex-wrap">
+                  <span><i class="fas fa-phone-alt"></i> +84 984 077 781</span>
+                  <span><i class="fas fa-envelope"></i>lienhe@farocafe.vn</span>
+                  <span><i class="fas fa-map-marker-alt"></i>81 Xuân Thủy, Phường An Khánh, TP. Hồ Chí Minh</span>
+               </div>
+               <div class="d-flex align-items-center gap-3">
+                  <a href="#special"><span class="ttag"><i class="fas fa-fire me-1"></i>Today's special promotion!</span></a>
+                  
+                  <div class="tsoc">
+                     <a href="#"><i class="fab fa-facebook-f"></i></a>
+                     <a href="#"><i class="fab fa-instagram"></i></a>
+                     <a href="#"><i class="fab fa-tiktok"></i></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- ============================================================
+         NAVBAR
+         ============================================================ -->
+     <nav class="navbar navbar-expand-lg" id="nav">
+         <div class="container">
+            <!-- Thêm lại icon ly nước nóng phía trước hình ảnh logo -->
+            <a class="navbar-brand" href="#">
+               <div class="blogo">
+                  <div class="bico me-2"><i class="fas fa-mug-hot"></i></div>
+                  <img src="img/ten-thuong-hieu-faro.png" alt="Faro Coffee Inspiration" class="logo-img"/>
+               </div>
+            </a>
+            
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+               <i class="fas fa-bars" style="color:var(--primary);font-size:1.35rem;"></i>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navmenu">
+               <ul class="navbar-nav mx-auto">
+                  <li class="nav-item"><a class="nav-link active" href="#hero">Trang chủ</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#about">Về Faro</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#menu">Thực đơn</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#testimonials">Đánh giá</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#reservation">Đặt tiệc Tea Break</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#contact-section">Liên hệ</a></li>
+               </ul>
+               <div class="d-flex align-items-center gap-1">
+                  <button id="navSearchBtn" title="Tìm kiếm"><i class="fas fa-search"></i></button>
+               </div>
+            </div>
+         </div>
+      </nav>
+      <!-- ============================================================
+         FIX 1 � SEARCH OVERLAY POPUP
+         ============================================================ -->
+      <div id="searchOv">
+         <button class="sovclose" id="searchClose"><i class="fas fa-times"></i></button>
+         <div class="sovbox">
+            <h4>What are you craving today?</h4>
+            <div class="sovinput">
+               <input type="text" id="searchInput" placeholder="Search burgers, pizza, chicken..." autocomplete="off"/>
+               <button><i class="fas fa-search"></i></button>
+            </div>
+            <!-- Categories inside search box -->
+            <div class="sovcats">
+               <div class="sovcat active" data-cat="all">
+                  <img src="img/menu/1.jpg" alt=""/>All Items
+               </div>
+               <div class="sovcat" data-cat="burgers">
+                  <img src="img/menu/1.jpg" alt=""/>Burgers
+               </div>
+               <div class="sovcat" data-cat="pizza">
+                  <img src="img/menu/2.jpg" alt=""/>Pizza
+               </div>
+               <div class="sovcat" data-cat="chicken">
+                  <img src="img/menu/3.jpg" alt=""/>Chicken
+               </div>
+               <div class="sovcat" data-cat="wraps">
+                  <img src="img/menu/4.jpg" alt=""/>Wraps
+               </div>
+               <div class="sovcat" data-cat="pasta">
+                  <img src="img/menu/5.jpg" alt=""/>Pasta
+               </div>
+               <div class="sovcat" data-cat="desserts">
+                  <img src="img/menu/6.jpg" alt=""/>Desserts
+               </div>
+            </div>
+            <div class="sovtrend">
+               <p><i class="fas fa-fire me-1" style="color:var(--secondary);"></i>Trending Searches</p>
+               <span class="ttag">Smash Burger</span>
+               <span class="ttag">Nashville Chicken</span>
+               <span class="ttag">Truffle Pizza</span>
+               <span class="ttag">Lava Cake</span>
+               <span class="ttag">Loaded Fries</span>
+               <span class="ttag">Mango Shake</span>
+            </div>
+         </div>
+      </div>
+      <!-- ============================================================
+         HERO
+         ============================================================ -->
+      <section id="hero">
+         <!-- Hệ thống slide nền 3 hình (Chạy hiệu ứng fade mượt mà) -->
+         <div class="hero-slider">
+            <div class="slide-item active" style="background-image: url('img/hero-image1.jpg');"></div>
+            <div class="slide-item" style="background-image: url('img/hero-image3.jpg');"></div>
+         </div>
+
+         <div class="hs hs1"></div>
+         <div class="hs hs2"></div>
+         <div class="container">
+            <div class="row align-items-center g-5" style="min-height:88vh;">
+               <div class="col-lg-6">
+                  <div class="hbadge">
+                     <div class="hbi"><i class="fas fa-star"></i></div>
+                     <span>#1 Không gian cà phê cảm hứng tại TP Hồ Chí Minh</span>
+                  </div>
+                  <h1 class="htitle">Đánh Thức <span class="hl">Vị Giác</span><br/>Khơi Nguồn <br/> Cảm Hứng</h1>
+                  <p class="hdesc">Tận hưởng hương vị cà phê đậm đà được tuyển chọn kỹ lưỡng, kết hợp cùng không gian yên bình — nơi lý tưởng để bạn kết nối, làm việc và tìm lại những phút giây thư thái cho riêng mình.</p>
+                  <div class="d-flex flex-wrap gap-3 mb-2">
+                     <a href="#menu" class="btn-red"><i class="fas fa-mug-hot"></i>Khám Phá Menu</a>
+                     <!-- FIX 2: Magnific popup video trigger -->
+					 <a href="https://www.youtube.com/watch?v=RXv_uIN6e-Y" class="magnific_popup btn-play popup-youtube">
+						<div class="pico"><i class="fas fa-play"></i></div>
+						<span>Câu Chuyện Faro</span>
+					 </a>
+                  </div>
+                  <div class="hstats d-flex gap-3 flex-wrap mt-4">
+                     <div class="hstat"><span class="snum">100<em>%</em></span><small>Hạt cà phê mộc</small></div>
+                     <div class="sdiv"></div>
+                     <div class="hstat"><span class="snum">30<em>+</em></span><small>MÓN NƯỚC & BÁNH</small></div>
+                     <div class="sdiv"></div>
+                     <div class="hstat"><span class="snum">7<em>+</em></span><small>KHÔNG GIAN TRẢI NGHIỆM</small></div>
+                     <div class="sdiv"></div>
+                     <div class="hstat"><span class="snum">2024<em></em></span><small>NĂM THÀNH LẬP</small></div>
+                  </div>
+               </div>
+               <div class="col-lg-6">
+                  <div style="position:relative;text-align:center;">
+                     <div class="hcircle">
+                        <!-- Đổi alt thành Specialty Coffee phù hợp với ảnh sản phẩm mới -->
+                        <img src="img/FARO609-scaled.jpg" alt="Faro Specialty Coffee"/>
+                     </div>
+                     
+                     <!-- Thẻ 1: Nhấn mạnh chất lượng hạt hạt Specialty -->
+                     <div class="fcard fc1">
+                        <div class="fcoi r"><i class="fas fa-gem"></i></div>
+                        <div><span class="fcnum">Specialty</span><span class="fcsm">100% Arabica mộc</span></div>
+                     </div>
+                     
+                     <!-- Thẻ 2: Điểm đánh giá (Giữ lại để tăng uy tín thương hiệu) -->
+                     <div class="fcard fc2">
+                        <div class="fcoi y"><i class="fas fa-star"></i></div>
+                        <div><span class="fcnum">4.9/5</span><span class="fcsm">Khách hàng hài lòng</span></div>
+                     </div>
+                     
+                     <!-- Thẻ 3: Dịch vụ giao hàng tận nơi phù hợp cho khối văn phòng/đồ uống -->
+                     <div class="fcard fc3">
+                        <div class="fcoi g"><i class="fas fa-shipping-fast"></i></div>
+                        <div><span class="fcnum">Hỏa Tốc</span><span class="fcsm">Giao nhanh nội thành</span></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- MARQUEE -->
+      <div class="mqsec">
+         <div class="mqtrack">
+            <div class="mqitem"><i class="fas fa-circle"></i>Cafe</div>
+            <div class="mqitem"><i class="fas fa-circle"></i>Đậm Bản Vị</div>
+            <div class="mqitem"><i class="fas fa-circle"></i>Latte</div>
+            <div class="mqitem"><i class="fas fa-circle"></i>Cold Brew</div>
+            <div class="mqitem"><i class="fas fa-circle"></i>Trà Thảo Mộc</div>
+            <div class="mqitem"><i class="fas fa-circle"></i>Trà Sữa</div>
+            <div class="mqitem"><i class="fas fa-circle"></i>Trái Cây Tươi</div>
+            <div class="mqitem"><i class="fas fa-circle"></i>Bánh Ngọt Tươi</div>
+         </div>
+      </div>
+      <!-- CATEGORY -->
+      <section id="category">
+         <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+               <span class="slbl">What We Offer</span>
+               <h2 class="stitle">Browse by <span>Category</span></h2>
+               <div class="sline"></div>
+               <p class="sdesc mx-auto" style="max-width:480px;">Từ những ly Cold Brew mộc mạc đến các dòng trà trái cây thanh mát — tìm thấy hương vị yêu thích của bạn tại Faro.</p>
+            </div>
+            <div class="row g-3 justify-content-center">
+               <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="0">
+                  <div class="catcard active" data-filter="all">
+                     <img class="catimg" src="img/category/category1.webp" alt=""/>
+                     <div class="catnm">Tất cả món</div>
+                     <div class="catct">33 món</div>
+                  </div>
+               </div>
+               <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="70">
+                  <div class="catcard" data-filter="burgers">
+                     <img class="catimg" src="img/category/category2.webp" alt=""/>
+                     <div class="catnm">Cafe</div>
+                     <div class="catct">8 món</div>
+                  </div>
+               </div>
+               <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="140">
+                  <div class="catcard" data-filter="pizza">
+                     <img class="catimg" src="img/category/category3.webp" alt=""/>
+                     <div class="catnm">Đậm Bản Vị</div>
+                     <div class="catct">11 món</div>
+                  </div>
+               </div>
+               <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="210">
+                  <div class="catcard" data-filter="chicken">
+                     <img class="catimg" src="img/category/category4.webp" alt=""/>
+                     <div class="catnm">Latte</div>
+                     <div class="catct">2 món</div>
+                  </div>
+               </div>
+               <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="280">
+                  <div class="catcard" data-filter="wraps">
+                     <img class="catimg" src="img/category/category5.webp" alt=""/>
+                     <div class="catnm">Cold Brew</div>
+                     <div class="catct">2 món</div>
+                  </div>
+               </div>
+               <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="350">
+                  <div class="catcard" data-filter="desserts">
+                     <img class="catimg" src="img/category/category6.webp" alt=""/>
+                     <div class="catnm">Trà Thảo Mộc</div>
+                     <div class="catct">2 món</div>
+                  </div>
+               </div>
+               <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="350">
+                  <div class="catcard" data-filter="desserts">
+                     <img class="catimg" src="img/category/category7.jpg" alt=""/>
+                     <div class="catnm">Trà Sữa</div>
+                     <div class="catct">2 món</div>
+                  </div>
+               </div>
+               <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="350">
+                  <div class="catcard" data-filter="desserts">
+                     <img class="catimg" src="img/category/category1.webp" alt=""/>
+                     <div class="catnm">Trái Cây Tươi</div>
+                     <div class="catct">2 món</div>
+                  </div>
+               </div>
+               <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="350">
+                  <div class="catcard" data-filter="desserts">
+                     <img class="catimg" src="img/category/category2.webp" alt=""/>
+                     <div class="catnm">Bánh Ngọt Tươi</div>
+                     <div class="catct">4 món</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- ABOUT -->
+      <section id="about">
+         <div class="container">
+            <div class="row align-items-center g-5">
+               <div class="col-lg-5" data-aos="fade-right">
+                  <div class="astack">
+                     <!-- Cập nhật mốc thành lập từ năm 2025 -->
+                     <div class="aexp"><span class="anum">2024</span><small>Năm<br/>Thành Lập</small></div>
+                     <div class="amain"><img src="img/about-faro1.jpg" alt="Faro Cafe Space"/></div>
+                     <div class="asm"><img src="img/about-faro2.jpg" alt="Faro Specialty Coffee"/></div>
+                  </div>
+               </div>
+               <div class="col-lg-7" data-aos="fade-left">
+                  <span class="slbl">Our Story</span>
+                  <!-- Đổi từ Food Restaurant sang Coffee Space -->
+                  <h2 class="stitle text-start">Chào Bạn Đến Với<br/>Không Gian <span>Faro Cafe</span></h2>
+                  <div class="sline lft"></div>
+                  
+                  <!-- Sửa lại đoạn mô tả phù hợp với Faro -->
+                  <p class="sdesc mb-4">Được thành lập từ năm 2024, Faro Cafe không chỉ là một quán cà phê, mà là nơi kết nối những tâm hồn đồng điệu, khơi nguồn cảm hứng làm việc và sẻ chia những góc nhìn sâu sắc về cuộc sống qua từng ly nước mộc mạc.</p>
+                  
+                  <div class="mb-4">
+                     <!-- Tiêu chí 1: Hạt mộc chất lượng -->
+                     <div class="fti">
+                        <div class="ftico r"><i class="fas fa-seedling"></i></div>
+                        <div>
+                           <h6>Cà Phê Mộc Specialty</h6>
+                           <p>Tuyển chọn từ những vùng nguyên liệu danh tiếng, rang xay mộc để giữ trọn vẹn hương vị bản sắc tự nhiên nguyên bản.</p>
+                        </div>
+                     </div>
+                     
+                     <!-- Tiêu chí 2: Không gian trải nghiệm -->
+                     <div class="fti">
+                        <div class="ftico y"><i class="fas fa-laptop-house"></i></div>
+                        <div>
+                           <h6>Không Gian Cảm Hứng</h6>
+                           <p>Thiết kế xanh, ngập tràn ánh sáng tự nhiên, là góc nhỏ lý tưởng để bạn tập trung làm việc, đọc sách hay trò chuyện.</p>
+                        </div>
+                     </div>
+                     
+                     <!-- Tiêu chí 3: Cộng đồng & Insight -->
+                     <div class="fti">
+                        <div class="ftico g"><i class="fas fa-lightbulb"></i></div>
+                        <div>
+                           <h6>Góc Nhìn & Sáng Tạo</h6>
+                           <p>Nơi phảng phất những câu chuyện đầy cảm hứng, đồng hành cùng bạn trên hành trình khám phá và phát triển bản thân.</p>
+                        </div>
+                     </div>
+                  </div>
+                  
+                  <!-- Nút kêu gọi hành động -->
+                  <a href="#menu" class="btn-red"><i class="fas fa-mug-hot"></i>Khám Phá Menu Ngay</a>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- ============================================================
+         MENU � FIX 3 (filter works) + FIX 4 (plus opens popup)
+         ============================================================ -->
+      <section id="menu">
+         <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+               <span class="slbl">What's Cooking</span>
+               <h2 class="stitle">Our Delicious <span>Menu</span></h2>
+               <div class="sline"></div>
+            </div>
+            <!-- FIX 3 � filter buttons -->
+            <div class="text-center mb-4" data-aos="fade-up">
+               <button class="filtbtn active" data-f="all">All</button>
+               <button class="filtbtn" data-f="cafes">Cafe</button>
+               <button class="filtbtn" data-f="dam-ban-vi">Đậm Bản Vị</button>
+               <button class="filtbtn" data-f="lattes">Latte</button>
+               <button class="filtbtn" data-f="coldbrews">Cold Brew</button>
+               <button class="filtbtn" data-f="tra-thao-moc">Trà Thảo Mộc</button>
+               <button class="filtbtn" data-f="tra-sua">Trà Sữa</button>
+               <button class="filtbtn" data-f="trai-cay-tuoi">Trái Cây Tươi</button>
+               <button class="filtbtn" data-f="banh-ngot-tuoi">Bánh Ngọt Tươi</button>
+            </div>
+            <div class="row g-4" id="mgrid">
+               <!-- CARD 1: cafes -->
+               <div class="col-sm-6 col-lg-4 mwrap" data-c="cafes" data-aos="fade-up">
+                  <div class="mcard"
+                     data-img="img/menu/1.webp"
+                     data-title="Classic Smash Burger"
+                     data-cat="Burgers"
+                     data-price="$14.99" data-old="$18.99"
+                     data-rating="4.9" data-reviews="128"
+                     data-cal="620" data-time="12"
+                     data-desc="Double smashed patty, cheddar cheese, caramelized onions, house pickles and our legendary special sauce. Made fresh to order on a toasted brioche bun."
+                     data-tags="Spicy,Bestseller,Beef">
+                     <div class="mimg">
+                        <img src="img/menu/1.webp" alt="Smash Burger"/>
+                        <div class="mbdg hot"><i class="fas fa-star"></i> Hot</div>
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                     </div>
+                     <div class="mbody">
+                        <div class="mcat">Cafe</div>
+                        <div class="mtit">Classic Smash Burger</div>
+                        <div class="mdesc">Double smashed patty, cheddar, caramelized onions, pickles &amp; special sauce</div>
+                        <div class="mfoot">
+                           <div>
+                              <div class="mprice">75.000 đ</div>
+                              <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(128)</span></div>
+                           </div>
+                           <button class="madd" title="View Details">Xem thêm</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- CARD 2: dam-ban-vi -->
+               <div class="col-sm-6 col-lg-4 mwrap" data-c="dam-ban-vi" data-aos="fade-up" data-aos-delay="80">
+                  <div class="mcard"
+                     data-img="img/menu/2.webp"
+                     data-title="Margherita Royale"
+                     data-cat="Pizza"
+                     data-price="$19.99" data-old="$24.99"
+                     data-rating="4.8" data-reviews="95"
+                     data-cal="480" data-time="18"
+                     data-desc="San Marzano tomatoes, fresh buffalo mozzarella, fragrant basil leaves, drizzled with Italian truffle oil on a hand-stretched sourdough base."
+                     data-tags="Vegetarian,New,Italian">
+                     <div class="mimg">
+                        <img src="img/menu/2.webp" alt="Pizza"/>
+                        <div class="mbdg new"><i class="fas fa-star"></i> New</div>
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                     </div>
+                     <div class="mbody">
+                        <div class="mcat">Đậm Bản Vị</div>
+                        <div class="mtit">Margherita Royale</div>
+                        <div class="mdesc">San Marzano tomatoes, buffalo mozzarella, basil &amp; truffle oil on sourdough</div>
+                        <div class="mfoot">
+                           <div>
+                              <div class="mprice">65.000 đ</div>
+                              <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(95)</span></div>
+                           </div>
+                           <button class="madd" title="View Details">Xem thêm</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- CARD 3: lattes -->
+               <div class="col-sm-6 col-lg-4 mwrap" data-c="lattes" data-aos="fade-up" data-aos-delay="160">
+                  <div class="mcard"
+                     data-img="img/menu/3.webp"
+                     data-title="Nashville Hot Chicken"
+                     data-cat="Chicken"
+                     data-price="$12.99" data-old="$16.99"
+                     data-rating="5.0" data-reviews="210"
+                     data-cal="710" data-time="15"
+                     data-desc="Extra-crispy fried chicken tossed in our signature fiery Nashville spice blend, served with honey drizzle and house pickles on a toasted brioche bun."
+                     data-tags="Spicy,Bestseller,Crispy">
+                     <div class="mimg">
+                        <img src="img/menu/3.webp" alt="Chicken"/>
+                        <div class="mbdg"><i class="fas fa-star"></i> Best Seller</div>
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                     </div>
+                     <div class="mbody">
+                        <div class="mcat">Latte</div>
+                        <div class="mtit">Nashville Hot Chicken</div>
+                        <div class="mdesc">Crispy fried chicken in fiery Nashville spice blend with honey drizzle</div>
+                        <div class="mfoot">
+                           <div>
+                              <div class="mprice">55.000 đ</div>
+                              <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(210)</span></div>
+                           </div>
+                           <button class="madd" title="View Details">Xem thêm</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- CARD 4: coldbrews -->
+               <div class="col-sm-6 col-lg-4 mwrap" data-c="coldbrews" data-aos="fade-up">
+                  <div class="mcard"
+                     data-img="img/menu/4.webp"
+                     data-title="Loaded Fajita Wrap"
+                     data-cat="Wraps"
+                     data-price="$10.99" data-old=""
+                     data-rating="4.5" data-reviews="74"
+                     data-cal="520" data-time="10"
+                     data-desc="Grilled chicken strips, saut�ed bell peppers and onions, sour cream, fresh guacamole and salsa wrapped in a warm flour tortilla with melted cheddar."
+                     data-tags="Grilled,Fresh,Mexican">
+                     <div class="mimg">
+                        <img src="img/menu/4.webp" alt="Wrap"/>
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                     </div>
+                     <div class="mbody">
+                        <div class="mcat">Cold Brew</div>
+                        <div class="mtit">Loaded Fajita Wrap</div>
+                        <div class="mdesc">Grilled chicken, peppers, sour cream &amp; guacamole in a warm tortilla</div>
+                        <div class="mfoot">
+                           <div>
+                              <div class="mprice">70.000 đ</div>
+                              <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(74)</span></div>
+                           </div>
+                           <button class="madd" title="View Details">Xem thêm</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- CARD 5: tra-thao-moc -->
+               <div class="col-sm-6 col-lg-4 mwrap" data-c="tra-thao-moc" data-aos="fade-up" data-aos-delay="80">
+                  <div class="mcard"
+                     data-img="img/menu/5.webp"
+                     data-title="Nutella Lava Cake"
+                     data-cat="Desserts"
+                     data-price="$8.99" data-old="$11.99"
+                     data-rating="4.9" data-reviews="56"
+                     data-cal="390" data-time="8"
+                     data-desc="Warm molten chocolate cake with a gooey Nutella center, served alongside Madagascar vanilla bean ice cream with salted caramel drizzle and fresh berries."
+                     data-tags="Sweet,New,Chocolate">
+                     <div class="mimg">
+                        <img src="img/menu/5.webp" alt="Lava Cake"/>
+                        <div class="mbdg new"><i class="fas fa-star"></i> New</div>
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                     </div>
+                     <div class="mbody">
+                        <div class="mcat">Trà Thảo Mộc</div>
+                        <div class="mtit">Nutella Lava Cake</div>
+                        <div class="mdesc">Molten chocolate cake with Nutella center, vanilla ice cream &amp; caramel</div>
+                        <div class="mfoot">
+                           <div>
+                              <div class="mprice">60.000 đ</div>
+                              <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(56)</span></div>
+                           </div>
+                           <button class="madd" title="View Details">Xem thêm</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- CARD 6: tra-sua -->
+               <div class="col-sm-6 col-lg-4 mwrap" data-c="tra-sua" data-aos="fade-up" data-aos-delay="160">
+                  <div class="mcard"
+                     data-img="img/menu/6.webp"
+                     data-title="Truffle Mushroom Pasta"
+                     data-cat="Pasta"
+                     data-price="$16.99" data-old=""
+                     data-rating="4.9" data-reviews="88"
+                     data-cal="560" data-time="20"
+                     data-desc="Al dente tagliatelle tossed with mixed wild mushrooms, freshly shaved black truffle, aged parmesan, fresh thyme and a touch of cream in garlic butter."
+                     data-tags="Vegetarian,Chef's Pick,Italian">
+                     <div class="mimg">
+                        <img src="img/menu/6.webp" alt="Pasta"/>
+                        <div class="mbdg hot">Chef's Pick</div>
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                     </div>
+                     <div class="mbody">
+                        <div class="mcat">Trà Sữa</div>
+                        <div class="mtit">Truffle Mushroom Pasta</div>
+                        <div class="mdesc">Al dente tagliatelle, wild mushrooms, black truffle, parmesan &amp; thyme</div>
+                        <div class="mfoot">
+                           <div>
+                              <div class="mprice">80.000 đ</div>
+                              <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(88)</span></div>
+                           </div>
+                           <button class="madd" title="View Details">Xem thêm</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- end #mgrid -->
+            <div class="text-center mt-5"><a href="#" class="btn-red"><i class="fas fa-th-large"></i>View Full Menu</a></div>
+         </div>
+      </section>
+	  
+	  
+      <!-- ============================================================
+         FIX 4 � MENU DETAIL POPUP MODAL
+         ============================================================ -->
+      <div id="menuPop">
+         <div class="mpbox">
+            <button class="mpclose" id="mpClose"><i class="fas fa-times"></i></button>
+            <div class="mpimg"><img id="mpImg" src="" alt=""/></div>
+            <div class="mpbody">
+               <div id="mpCat"></div>
+               <div id="mpTitle"></div>
+               <div id="mpStars"></div>
+               <div id="mpDesc"></div>
+               <div id="mpPrice"></div>
+               <div class="mpmeta" id="mpMeta"></div>
+               <div class="mpqty">
+                  <button class="mpqbtn" id="mpMinus">-</button>
+                  <span class="mpqnum" id="mpQnum">1</span>
+                  <button class="mpqbtn" id="mpPlus">+</button>
+                  <span style="font-size:.82rem;color:#aaa;margin-left:9px;">portion</span>
+               </div>
+               <div class="mptags" id="mpTags"></div>
+               <button class="mpaddcart" id="mpAddCart"><i class="fas fa-shopping-cart"></i>Add to Cart</button>
+            </div>
+         </div>
+      </div>
+      <!-- SPECIAL OFFER -->
+      <!-- <section id="special">
+         <div class="spbg"></div>
+         <div class="container" style="position:relative;z-index:2;">
+            <div class="row align-items-center g-5">
+               <div class="col-lg-6" data-aos="fade-right">
+                  <div class="sptag"><i class="fas fa-bolt me-1"></i>Limited Time Offer</div>
+                  <h2 class="sptitle">Get 30% Off<br/>Our Signature<br/><span>Burger</span> Meal</h2>
+                  <p class="spdesc">Don't miss our weekend special - grab our award-winning signature burger combo with loaded fries and a premium shake at an unbeatable price.</p>
+                  <div class="cdwrap">
+                     <div class="cditem"><span class="cdnum" id="cdH">08</span><span class="cdlbl">Hours</span></div>
+                     <div class="cditem"><span class="cdnum" id="cdM">45</span><span class="cdlbl">Minutes</span></div>
+                     <div class="cditem"><span class="cdnum" id="cdS">30</span><span class="cdlbl">Seconds</span></div>
+                  </div>
+                  <a href="#menu" class="btn-red"><i class="fas fa-shopping-cart"></i>Grab the Deal</a>
+               </div>
+               <div class="col-lg-6" data-aos="fade-left">
+                  <div class="spimgw">
+                     <div class="spglow"></div>
+                     <div class="sppbdg"><span class="old">$24.99</span><span class="np">$17.49</span></div>
+                     <img src="img/off-img.jpg" alt="Special Burger"/>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section> -->
+
+      <section id="special">
+         <div class="spbg"></div>
+         <div class="container" style="position:relative;z-index:2;">
+            <div class="row align-items-center g-5">
+               <div class="col-lg-6" data-aos="fade-right">
+                  <!-- Đổi icon sấm sét thành icon đồng hồ cát cho tinh tế -->
+                  <div class="sptag"><i class="fas fa-hourglass-half me-1"></i>Ưu Đãi Giới Hạn Trong Ngày</div>
+                  
+                  <!-- Tiêu đề chương trình mới của Faro -->
+                  <h2 class="sptitle">Ưu Đãi 30%<br/>Combo Cà Phê Chai<br/>& <span>Bánh Tươi</span></h2>
+                  
+                  <!-- Mô tả chi tiết chương trình -->
+                  <p class="spdesc">Đánh thức năng lượng ngày mới với sự kết hợp hoàn hảo giữa dòng cà phê chai Specialty nguyên bản tự nhiên và một phần bánh ngọt tươi được nướng mới mỗi ngày tại Faro. Số lượng giới hạn theo khung giờ!</p>
+                  
+                  <!-- Hệ thống đếm ngược giữ nguyên cấu trúc class cũ -->
+                  <div class="cdwrap">
+                     <div class="cditem"><span class="cdnum" id="cdH">08</span><span class="cdlbl">Giờ</span></div>
+                     <div class="cditem"><span class="cdnum" id="cdM">45</span><span class="cdlbl">Phút</span></div>
+                     <div class="cditem"><span class="cdnum" id="cdS">30</span><span class="cdlbl">Giây</span></div>
+                  </div>
+                  
+                  <!-- Nút kêu gọi hành động đổi icon sang giỏ hàng/ly nước -->
+                  <a href="#menu" class="btn-red"><i class="fas fa-shopping-basket"></i>Nhận Ưu Đãi Ngay</a>
+               </div>
+               
+               <div class="col-lg-6" data-aos="fade-left">
+                  <div class="spimgw">
+                     <div class="spglow"></div>
+                     <!-- Cập nhật lại giá tiền sang VNĐ (Ví dụ: Từ 115k giảm còn 79k) -->
+                     <div class="sppbdg"><span class="old">115K</span><span class="np">79K</span></div>
+                     
+                     <!-- Nhớ thay hình ảnh combo nước + bánh của Faro tại đây -->
+                     <img src="img/menu/5.webp" alt="Faro Special Combo"/>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+	  
+	  
+      <!-- ============================================================
+         GALLERY � FIX 7 (click opens detail popup)
+         ============================================================ -->
+      <section id="gallery">
+         <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+               <span class="slbl">Food Showcase</span>
+               <h2 class="stitle">Let's See Our <span>Fast Food</span></h2>
+               <div class="sline"></div>
+            </div>
+            <div class="ggrid" data-aos="fade-up">
+               <div class="gitem"
+                  data-gi="0"
+                  data-gimg="img/portfolio/1.webp"
+                  data-gtitle="Gourmet Burgers"
+                  data-gdesc="Our award-winning smash burgers, hand-crafted with 100% premium beef, aged cheddar and house-made sauces.">
+                  <img src="img/portfolio/1.webp" alt="Burgers"/>
+                  <div class="gover"><span><i class="fas fa-expand-alt"></i> Gourmet Burgers</span></div>
+               </div>
+               <div class="gitem"
+                  data-gi="1"
+                  data-gimg="img/portfolio/2.webp"
+                  data-gtitle="Wood-Fired Pizza"
+                  data-gdesc="Authentic Neapolitan-style pizzas fired at 900deg F in our wood-burning stone oven for the perfect char.">
+                  <img src="img/portfolio/2.webp" alt="Pizza"/>
+                  <div class="gover"><span><i class="fas fa-expand-alt"></i> Wood-Fired Pizza</span></div>
+               </div>
+               <div class="gitem"
+                  data-gi="2"
+                  data-gimg="img/portfolio/3.webp"
+                  data-gtitle="Crispy Fried Chicken"
+                  data-gdesc="Double-brined, hand-battered chicken fried to golden perfection using our 15-spice secret blend.">
+                  <img src="img/portfolio/3.webp" alt="Chicken"/>
+                  <div class="gover"><span><i class="fas fa-expand-alt"></i> Crispy Fried Chicken</span></div>
+               </div>
+               <div class="gitem"
+                  data-gi="3"
+                  data-gimg="img/portfolio/4.webp"
+                  data-gtitle="Sweet Desserts"
+                  data-gdesc="Handcrafted desserts - from molten lava cakes to artisan ice cream sundaes and seasonal pastries.">
+                  <img src="img/portfolio/4.webp" alt="Desserts"/>
+                  <div class="gover"><span><i class="fas fa-expand-alt"></i> Sweet Desserts</span></div>
+               </div>
+               <div class="gitem"
+                  data-gi="4"
+                  data-gimg="img/portfolio/5.webp"
+                  data-gtitle="Fresh Wraps &amp; Rolls"
+                  data-gdesc="Loaded fresh wraps packed with grilled proteins, crunchy vegetables and our house-made sauces.">
+                  <img src="img/portfolio/5.webp" alt="Wraps"/>
+                  <div class="gover"><span><i class="fas fa-expand-alt"></i> Fresh Wraps &amp; Rolls</span></div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- FIX 7 � GALLERY POPUP -->
+      <div id="galPop">
+         <div class="gpbox">
+            <button class="gpclose" id="gpClose"><i class="fas fa-times"></i></button>
+            <img id="gpImg" src="" alt=""/>
+            <div class="gpcap">
+               <h5 id="gpTitle"></h5>
+               <p id="gpDesc"></p>
+            </div>
+            <div class="gpnav">
+               <button id="gpPrev"><i class="fas fa-chevron-left me-1"></i>Prev</button>
+               <button id="gpNext">Next <i class="fas fa-chevron-right ms-1"></i></button>
+            </div>
+         </div>
+      </div>
+	
+	  
+      <!-- TESTIMONIALS -->
+      <section id="testimonials">
+         <div class="container">
+            <!-- Tiêu đề mục Đánh giá -->
+            <div class="text-center mb-5" data-aos="fade-up">
+               <span class="slbl">Khách Hàng Nói Gì</span>
+               <h2 class="stitle">Đánh Giá Từ <span>Khách Hàng</span></h2>
+               <div class="sline"></div>
+            </div>
+            
+            <div class="swiper tesSwiper" data-aos="fade-up">
+               <div class="swiper-wrapper">
+                  
+                  <!-- Slide 1: Đánh giá về chất lượng Cà phê Đậm Bản Vị / Specialty -->
+                  <div class="swiper-slide">
+                     <div class="tescard">
+                        <div class="tesq">"</div>
+                        <div class="tess"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p class="testxt">Dòng Đậm Bản Vị thơm nồng, hậu vị đầm, còn Latte thì lớp bọt sữa mịn màng, ngậy béo nhưng vẫn giữ trọn vẹn được hương thơm tự nhiên nguyên bản của hạt cà phê. Điểm cộng lớn nữa là không gian quán thiết kế rất tinh tế.</p>
+                        <div class="tesauth">
+                           <img src="img/testimonial/1.jpg" alt="Khách hàng Faro"/>
+                           <div>
+                              <div class="tesnm">Minh Thư</div>
+                              <div class="tesrl">Khách Hàng Thân Thiết</div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  
+                  <!-- Slide 2: Đánh giá về sự tiện lợi của Cà phê Chai Specialty -->
+                  <div class="swiper-slide">
+                     <div class="tescard">
+                        <div class="tesq">"</div>
+                        <div class="tess"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p class="testxt">Mình hay đặt dòng Cà phê chai Specialty mang đi giao đến văn phòng. Đóng gói rất chỉn chu, sạch sẽ, để tủ lạnh uống dần vẫn thơm nguyên mùi Cold Brew. Ship siêu nhanh, từ ngày biết Faro là nghiện luôn.</p>
+                        <div class="tesauth">
+                           <img src="img/testimonial/2.jpg" alt="Khách hàng Faro"/>
+                           <div>
+                              <div class="tesnm">Hoàng Nam</div>
+                              <div class="tesrl">Nhân Viên Văn Phòng</div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  
+                  <!-- Slide 3: Đánh giá về dịch vụ Tiệc trà / Tea Break doanh nghiệp -->
+                  <div class="swiper-slide">
+                     <div class="tescard">
+                        <div class="tesq">"</div>
+                        <div class="tess"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p class="testxt">Công ty mình vừa rồi có đặt set Tea Break của Faro cho buổi Workshop 50 người. Menu bánh tươi nướng rất ngon, nước trái cây tươi thanh mát, các bạn set up cực kỳ chuyên nghiệp và đúng giờ. Sếp mình khen suốt!</p>
+                        <div class="tesauth">
+                           <img src="img/testimonial/3.jpg" alt="Khách hàng Faro"/>
+                           <div>
+                              <div class="tesnm">Thanh Hương</div>
+                              <div class="tesrl">Đại Diện Doanh Nghiệp</div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  
+                  <!-- Slide 4: Đánh giá tổng quan về dịch vụ và không gian bánh tươi -->
+                  <div class="swiper-slide">
+                     <div class="tescard">
+                        <div class="tesq">"</div>
+                        <div class="tess"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p class="testxt">Mỗi lần ghé quán là bị cuốn bởi mùi bánh nướng thơm phức. Thích nhất là combo Cold Brew kèm một phần bánh ngọt tươi vào buổi sáng. Nhân viên nhiệt tình, không gian tinh tế, 10 điểm không có nhưng!</p>
+                        <div class="tesauth">
+                           <img src="img/testimonial/4.jpg" alt="Khách hàng Faro"/>
+                           <div>
+                              <div class="tesnm">Khánh Linh</div>
+                              <div class="tesrl">Food Reviewer</div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
+               <div class="swiper-pagination mt-4" style="position:static;"></div>
+            </div>
+         </div>
+      </section>
+	  
+      <!-- RESERVATION FORM -->
+      <section id="reservation">
+         <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+               <span class="slbl">Dịch Vụ Sự Kiện</span>
+               <h2 class="stitle">Đặt Tiệc <span>Tea Break</span></h2>
+               <div class="sline"></div>
+               <p class="sdesc mx-auto" style="max-width:480px;">
+                  Mang đến không gian sự kiện chuyên nghiệp với thực đơn tiệc trà, cà phê và bánh ngọt tươi cao cấp. Vui lòng đặt trước 24 giờ để Faro chuẩn bị chu đáo nhất.
+               </p>
+            </div>
+            <div class="row g-4 align-items-start">
+               <div class="col-lg-4" data-aos="fade-right">
+                  <div style="background:var(--dark);border-radius:18px;padding:36px;">
+                     <h4 style="color:#fff;font-size:1.3rem;margin-bottom:8px;">Thông Tin Liên Hệ</h4>
+                     <p style="color:rgba(255,255,255,.55);font-size:.85rem;margin-bottom:26px;">Faro luôn sẵn sàng lắng nghe và đồng hành cùng những trải nghiệm của bạn.</p>
+                     <div class="d-flex flex-column gap-3">
+                        <!-- 1. Giờ hoạt động -->
+                        <div class="d-flex align-items-center gap-3">
+                           <div style="width:46px;height:46px;border-radius:11px;background:rgba(232,40,26,.2);display:flex;align-items:center;justify-content:center;color:var(--primary);font-size:1.1rem;flex-shrink:0;"><i class="fas fa-clock"></i></div>
+                           <div><strong style="display:block;color:#ccc;font-size:.78rem;text-transform:uppercase;letter-spacing:.8px;">Giờ mở cửa</strong><span style="color:#fff;font-size:.87rem;">Thứ 2 - Chủ Nhật, 7 AM - 10 PM</span></div>
+                        </div>
+                        
+                        <!-- 2. Hotline -->
+                        <div class="d-flex align-items-center gap-3">
+                           <div style="width:46px;height:46px;border-radius:11px;background:rgba(232,40,26,.2);display:flex;align-items:center;justify-content:center;color:var(--primary);font-size:1.1rem;flex-shrink:0;"><i class="fas fa-phone-alt"></i></div>
+                           <div><strong style="display:block;color:#ccc;font-size:.78rem;text-transform:uppercase;letter-spacing:.8px;">Hotline liên hệ</strong><span style="color:#fff;font-size:.87rem;">+84 984 077 781</span></div>
+                        </div>
+                        
+                        <!-- 3. Email (Thay cho Group Dining) -->
+                        <div class="d-flex align-items-center gap-3">
+                           <div style="width:46px;height:46px;border-radius:11px;background:rgba(232,40,26,.2);display:flex;align-items:center;justify-content:center;color:var(--primary);font-size:1.1rem;flex-shrink:0;"><i class="fas fa-envelope"></i></div>
+                           <div><strong style="display:block;color:#ccc;font-size:.78rem;text-transform:uppercase;letter-spacing:.8px;">Email hỗ trợ</strong><span style="color:#fff;font-size:.87rem;">lienhe@farocafe.vn</span></div>
+                        </div>
+                        
+                        <!-- 4. Địa chỉ -->
+                        <div class="d-flex align-items-center gap-3">
+                           <div style="width:46px;height:46px;border-radius:11px;background:rgba(232,40,26,.2);display:flex;align-items:center;justify-content:center;color:var(--primary);font-size:1.1rem;flex-shrink:0;"><i class="fas fa-map-marker-alt"></i></div>
+                           <div><strong style="display:block;color:#ccc;font-size:.78rem;text-transform:uppercase;letter-spacing:.8px;">Địa chỉ quán</strong><span style="color:#fff;font-size:.87rem;">81 Xuân Thủy, Phường An Khánh, TP. Hồ Chí Minh</span></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-8" data-aos="fade-left">
+                  <div class="fcard">
+                     <div class="row g-3">
+                        <!-- 1. Thông tin cá nhân/Đại diện -->
+                        <div class="col-sm-6"><label class="flbl">Họ và Tên *</label><input type="text" class="fctrl" placeholder="Nguyễn Văn A"/></div>
+                        <div class="col-sm-6"><label class="flbl">Số Điện Thoại *</label><input type="tel" class="fctrl" placeholder="0984 xxx xxx"/></div>
+                        <div class="col-sm-6"><label class="flbl">Địa Chỉ Email *</label><input type="email" class="fctrl" placeholder="name@company.com"/></div>
+                        
+                        <!-- 2. Quy mô tiệc (Thay đổi số lượng người phù hợp cho sự kiện công ty/workshop) -->
+                        <div class="col-sm-6">
+                           <label class="flbl">Quy Mô Sự Kiện *</label>
+                           <select class="fctrl">
+                              <option>Dưới 20 người</option>
+                              <option>20 - 50 người</option>
+                           </select>
+                        </div>
+                        
+                        <!-- 3. Thời gian tổ chức -->
+                        <div class="col-sm-6"><label class="flbl">Ngày Tổ Chức *</label><input type="date" class="fctrl"/></div>
+                        <div class="col-sm-6">
+                           <label class="flbl">Khung Giờ Dùng Tiệc *</label>
+                           <select class="fctrl">
+                              <option>08:00 AM</option>
+                              <option>09:00 AM</option>
+                              <option>10:00 AM</option>
+                              <option>11:00 AM</option>
+                              <option>01:30 PM</option>
+                              <option>02:30 PM</option>
+                              <option>03:30 PM</option>
+                              <option>04:30 PM</option>
+                           </select>
+                        </div>
+                        
+                        <!-- 4. Ghi chú yêu cầu đặc biệt về thực đơn/bàn ghế -->
+                        <div class="col-12"><label class="flbl">Yêu Cầu Đặc Biệt</label><textarea class="fctrl" rows="3" placeholder="Ví dụ: Yêu cầu về dòng bánh, set up không gian, hạn chế đường, đồ chay..."></textarea></div>
+                        
+                        <!-- 5. Nút xác nhận đặt dịch vụ -->
+                        <div class="col-12"><button class="btn-red w-100 justify-content-center" id="resBtn"><i class="fas fa-calendar-check"></i>Gửi Yêu Cầu Đặt Tiệc</button></div>
+                     </div>
+                     
+                     <!-- 6. Thông báo gửi thành công -->
+                     <div class="sucmsg" id="resOk">
+                        <i class="fas fa-check-circle"></i>
+                        <p>Yêu cầu đã được ghi nhận! Faro sẽ liên hệ lại qua email hoặc số điện thoại để xác nhận và gửi báo giá trong thời gian sớm nhất.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+	  
+      <!-- BLOG -->
+      <!-- <section id="blog">
+         <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+               <span class="slbl">News &amp; Updates</span>
+               <h2 class="stitle">Our Latest <span>Blog</span> Posts</h2>
+               <div class="sline"></div>
+            </div>
+            <div class="row g-4">
+               <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                  <div class="blcard">
+                     <div class="blimg">
+                        <img src="img/blog/1.jpg" alt=""/>
+                        <div class="bldatebdg"><span class="bd">14</span><span class="bm">Mar</span></div>
+                     </div>
+                     <div class="blbody">
+                        <div class="bltag">Food &amp; Health</div>
+                        <div class="bltit"><a href="#">Healthy Fast Food: A Myth or Beautiful Reality</a></div>
+                        <div class="blmeta"><span><i class="fas fa-user"></i>James Writer</span><span><i class="fas fa-comment"></i>24 Comments</span></div>
+                        <a href="#" class="blmore">Read More <i class="fas fa-arrow-right"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+                  <div class="blcard">
+                     <div class="blimg">
+                        <img src="img/blog/2.jpg" alt=""/>
+                        <div class="bldatebdg"><span class="bd">28</span><span class="bm">Feb</span></div>
+                     </div>
+                     <div class="blbody">
+                        <div class="bltag">Food Science</div>
+                        <div class="bltit"><a href="#">Is Fast Food Getting Healthier? Here's What We Found</a></div>
+                        <div class="blmeta"><span><i class="fas fa-user"></i>Sarah Grain</span><span><i class="fas fa-comment"></i>18 Comments</span></div>
+                        <a href="#" class="blmore">Read More <i class="fas fa-arrow-right"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+                  <div class="blcard">
+                     <div class="blimg">
+                        <img src="img/blog/3.jpg" alt=""/>
+                        <div class="bldatebdg"><span class="bd">05</span><span class="bm">Jan</span></div>
+                     </div>
+                     <div class="blbody">
+                        <div class="bltag">Recipes</div>
+                        <div class="bltit"><a href="#">Innovative Hot Chickpeas Flake Crackin' Recipe at Home</a></div>
+                        <div class="blmeta"><span><i class="fas fa-user"></i>Chef Marcus</span><span><i class="fas fa-comment"></i>32 Comments</span></div>
+                        <a href="#" class="blmore">Read More <i class="fas fa-arrow-right"></i></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section> -->
+	  
+      <!-- NEWSLETTER -->
+      <!-- <section id="newsletter">
+         <div class="nlbg"></div>
+         <div class="container">
+            <div class="nlw text-center" data-aos="zoom-in">
+               <span class="slbl" style="color:rgba(255,255,255,.7);">Stay Connected</span>
+               <h2 class="mb-3" style="color:#fff;">Subscribe &amp; Get Exclusive <span style="color:var(--secondary);">Deals</span></h2>
+               <p class="mb-4" style="color:rgba(255,255,255,.78);">Get 15% off your first order plus early access to new menu items</p>
+               <div class="nl-form-wrap">
+                  <input class="nlinput" type="email" id="nlEmail" placeholder="Enter your email address..."/>
+                  <button class="nlbtn" id="nlBtn"><i class="fas fa-paper-plane me-1"></i>Subscribe</button>
+               </div>
+               <p style="color:rgba(255,255,255,.45);font-size:.76rem;margin-top:11px;"><i class="fas fa-lock me-1"></i>No spam, unsubscribe anytime.</p>
+            </div>
+         </div>
+      </section> -->
+	  
+      <!-- ============================================================
+         FIX 6 � CONTACT FORM
+         ============================================================ -->
+      <section id="contact-section">
+         <div class="container">
+            <!-- Đầu trang liên hệ -->
+            <div class="text-center mb-5" data-aos="fade-up">
+               <span class="slbl">Kết Nối Với Faro</span>
+               <h2 class="stitle">Liên Hệ <span>Chúng Tôi</span></h2>
+               <div class="sline"></div>
+               <p class="sdesc mx-auto" style="max-width:480px;">Bạn có câu hỏi, đóng góp ý kiến hoặc muốn lên kế hoạch cho một sự kiện đặc biệt? Faro luôn sẵn sàng lắng nghe bạn.</p>
+            </div>
+            
+            <div class="row g-4">
+               <!-- Cột bên trái: Khối thông tin liên hệ trực tiếp -->
+               <div class="col-lg-4" data-aos="fade-right">
+                  <div class="ctdark">
+                     <h4>Trò Chuyện Cùng Faro</h4>
+                     <p class="ctsub">Faro thường phản hồi trong vòng 2 giờ trong khung giờ hoạt động.</p>
+                     
+                     <!-- 1. Địa chỉ -->
+                     <div class="ctitem">
+                        <div class="cticon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="ctinfo"><strong>Địa chỉ</strong><span>81 Xuân Thủy, Phường An Khánh,<br/>TP. Hồ Chí Minh</span></div>
+                     </div>
+                     
+                     <!-- 2. Số điện thoại -->
+                     <div class="ctitem">
+                        <div class="cticon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="ctinfo"><strong>Hotline</strong><span>+84 984 077 781</span></div>
+                     </div>
+                     
+                     <!-- 3. Email -->
+                     <div class="ctitem">
+                        <div class="cticon"><i class="fas fa-envelope"></i></div>
+                        <div class="ctinfo"><strong>Email</strong><span>lienhe@farocafe.vn</span></div>
+                     </div>
+                     
+                     <!-- 4. Giờ hoạt động -->
+                     <div class="ctitem">
+                        <div class="cticon"><i class="fas fa-clock"></i></div>
+                        <div class="ctinfo"><strong>Giờ mở cửa</strong><span>Thứ 2 - Chủ Nhật: 7 AM - 10 PM</span></div>
+                     </div>
+                     
+                     <!-- Mạng xã hội -->
+                     <div class="ctsocrow">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a> <!-- Thay đổi Twitter sang TikTok cho hợp xu hướng local -->
+                     </div>
+                  </div>
+               </div>
+               
+               <!-- Cột bên phải: Form gửi lời nhắn -->
+               <div class="col-lg-8" data-aos="fade-left">
+                  <div class="fcard">
+                     <div class="row g-3">
+                        <div class="col-sm-6"><label class="flbl">Họ và Tên *</label><input type="text" class="fctrl" placeholder="Nguyễn Văn A"/></div>
+                        <div class="col-sm-6"><label class="flbl">Địa Chỉ Email *</label><input type="email" class="fctrl" placeholder="name@company.com"/></div>
+                        <div class="col-sm-6"><label class="flbl">Số Điện Thoại</label><input type="tel" class="fctrl" placeholder="0984 xxx xxx"/></div>
+                        
+                        <!-- Dropdown Chủ đề liên hệ được thiết kế lại cho Faro Cafe -->
+                        <div class="col-sm-6">
+                           <label class="flbl">Chủ Đề Liên Hệ *</label>
+                           <select class="fctrl">
+                              <option>Góp ý &amp; Phản hồi dịch vụ</option>
+                              <option>Đặt tiệc Tea Break &amp; Sự kiện</option>
+                              <option>Hợp tác kinh doanh (Partnership)</option>
+                              <option>Liên hệ truyền thông (Media &amp; Press)</option>
+                              <option>Câu hỏi khác</option>
+                           </select>
+                        </div>
+                        
+                        <div class="col-12"><label class="flbl">Lời Nhắn *</label><textarea class="fctrl" rows="5" placeholder="Nhập nội dung lời nhắn của bạn tại đây..."></textarea></div>
+                        <div class="col-12"><button class="btn-red" id="ctcBtn"><i class="fas fa-paper-plane"></i>Gửi Lời Nhắn</button></div>
+                     </div>
+                     
+                     <!-- Khối thông báo thành công dạng tiếng Việt -->
+                     <div class="sucmsg" id="ctcOk">
+                        <i class="fas fa-check-circle"></i>
+                        <p>Lời nhắn đã được gửi đi thành công! Faro sẽ phản hồi lại bạn trong vòng 2 giờ.</p>
+                     </div>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </section>
+	  
+      <!-- FOOTER -->
+      <footer>
+         <div class="container">
+            <div class="row g-5">
+               <!-- Cột 1: Giới thiệu ngắn về Faro tích hợp Logo Hình Ảnh -->
+               <div class="col-lg-4">
+                  <div class="blogo mb-3">
+                     <div class="bico me-2"><i class="fas fa-mug-hot"></i></div>
+                     <img src="img/ten-thuong-hieu-faro.png" alt="Faro Coffee Inspiration" class="f-logo-img"/>
+                  </div>
+                  <p class="fdesc">Mang đến trải nghiệm hương vị cà phê Specialty nguyên bản, tự nhiên kết hợp cùng các dòng bánh tươi cao cấp. Mỗi sản phẩm tại Faro đều được gửi gắm trọn vẹn sự chỉn chu và tâm huyết.</p>
+                  <div class="fsoc">
+                     <a href="#"><i class="fab fa-facebook-f"></i></a>
+                     <a href="#"><i class="fab fa-instagram"></i></a>
+                     <a href="#"><i class="fab fa-tiktok"></i></a>
+                  </div>
+               </div>
+               
+               <!-- Cột 2: Liên kết nhanh -->
+               <div class="col-sm-6 col-lg-2">
+                  <div class="ftit">Liên Kết Nhanh</div>
+                  <ul class="flinks ps-0">
+                     <li><a href="#hero"><i class="fas fa-chevron-right"></i>Trang chủ</a></li>
+                     <li><a href="#about"><i class="fas fa-chevron-right"></i>Về Faro</a></li>
+                     <li><a href="#menu"><i class="fas fa-chevron-right"></i>Thực đơn</a></li>
+                     <li><a href="#teabreak"><i class="fas fa-chevron-right"></i>Đặt tiệc Tea Break</a></li>
+                     <li><a href="#blog"><i class="fas fa-chevron-right"></i>Góc chia sẻ</a></li>
+                     <li><a href="#contact-section"><i class="fas fa-chevron-right"></i>Liên hệ</a></li>
+                  </ul>
+               </div>
+               
+               <!-- Cột 3: Menu cập nhật theo danh mục mới của Faro -->
+               <div class="col-sm-6 col-lg-2">
+                  <div class="ftit">Thực Đơn Faro</div>
+                  <ul class="flinks ps-0">
+                     <li><a href="#menu"><i class="fas fa-chevron-right"></i>Cafe</a></li>
+                     <li><a href="#menu"><i class="fas fa-chevron-right"></i>Đậm Bản Vị</a></li>
+                     <li><a href="#menu"><i class="fas fa-chevron-right"></i>Latte</a></li>
+                     <li><a href="#menu"><i class="fas fa-chevron-right"></i>Cold Brew</a></li>
+                     <li><a href="#menu"><i class="fas fa-chevron-right"></i>Trà Thảo Mộc &amp; Trà Sữa</a></li>
+                     <li><a href="#menu"><i class="fas fa-chevron-right"></i>Trái Cây Tươi</a></li>
+                     <li><a href="#menu"><i class="fas fa-chevron-right"></i>Bánh Ngọt Tươi</a></li>
+                  </ul>
+               </div>
+               
+               <!-- Cột 4: Thông tin liên hệ trực tiếp -->
+               <div class="col-lg-4">
+                  <div class="ftit">Thông Tin Liên Hệ</div>
+                  <div class="fci">
+                     <div class="fciico"><i class="fas fa-map-marker-alt"></i></div>
+                     <div class="fciinfo"><strong>Địa chỉ:</strong>81 Xuân Thủy, Phường An Khánh, TP. Hồ Chí Minh</div>
+                  </div>
+                  <div class="fci">
+                     <div class="fciico"><i class="fas fa-phone-alt"></i></div>
+                     <div class="fciinfo"><strong>Hotline:</strong>+84 984 077 781</div>
+                  </div>
+                  <div class="fci">
+                     <div class="fciico"><i class="fas fa-envelope"></i></div>
+                     <div class="fciinfo"><strong>Email:</strong>lienhe@farocafe.vn</div>
+                  </div>
+                  <div class="fci">
+                     <div class="fciico"><i class="fas fa-clock"></i></div>
+                     <div class="fciinfo"><strong>Giờ mở cửa:</strong>Thứ 2 - Chủ Nhật: 07 AM - 10 PM</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         
+         <!-- Bản quyền chân trang -->
+         <div class="fbot">
+            <div class="container">
+               <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                  <p>&copy; 2026 <span>Faro Cafe</span>. Bảo lưu mọi quyền. Phát triển bởi <a target="_blank" class="mx-0 fw-bold text-success" href="#">Faro Group</a>.</p>
+                  <div>
+                     <a href="#">Chính sách bảo mật</a>
+                     <a href="#">Điều khoản sử dụng</a>
+                     <a href="#">Cookies</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- Floating cart -->
+      <!-- <div class="cartfl"><i class="fas fa-shopping-cart"></i><span>My Cart</span><div class="ccount" id="cartCount">0</div></div> -->
+      <!-- Back to top -->
+      <button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-chevron-up"></i></button>
+    
+	<!-- jQuery -->
+      <script src="js/jquery-3.7.1.min.js"></script>
+      <!-- Bootstrap 5 -->
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <!-- AOS -->
+      <script src="js/aos.js"></script>
+      <!-- Swiper -->
+      <script src="js/swiper-bundle.min.js"></script>
+      <!-- CounterUp -->
+      <script src="js/jquery.magnific-popup.min.js"></script>
+      <!-- Main js -->
+      <script src="js/main.js"></script>
+   </body>
+</html>
