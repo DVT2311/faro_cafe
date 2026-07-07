@@ -82,6 +82,7 @@
                   <li class="nav-item"><a class="nav-link" href="#testimonials">Đánh giá</a></li>
                   <li class="nav-item"><a class="nav-link" href="#reservation">Đặt tiệc Tea Break</a></li>
                   <li class="nav-item"><a class="nav-link" href="#contact-section">Liên hệ</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Tuyển dụng</a></li>
                   <li class="nav-item"><a class="nav-link" href="#">Faro group</a></li>
                </ul>
                <div class="d-flex align-items-center gap-1">
@@ -150,7 +151,7 @@
                   <div class="d-flex flex-wrap gap-3 mb-2">
                      <a href="#menu" class="btn-red"><i class="fas fa-mug-hot"></i>Khám Phá Menu</a>
                      <!-- FIX 2: Magnific popup video trigger -->
-					 <a href="https://www.youtube.com/watch?v=RXv_uIN6e-Y" class="magnific_popup btn-play popup-youtube">
+					 <a href="https://www.youtube.com/watch?v=oBnA4K2Eqk0" class="magnific_popup btn-play popup-youtube">
 						<div class="pico"><i class="fas fa-play"></i></div>
 						<span>Câu Chuyện Faro</span>
 					 </a>
@@ -289,23 +290,35 @@
             <div class="row align-items-center g-5">
                <div class="col-lg-5" data-aos="fade-right">
                   <div class="astack">
-                     <!-- Cập nhật mốc thành lập từ năm 2025 -->
                      <div class="aexp"><span class="anum">2024</span><small>Năm<br/>Thành Lập</small></div>
-                     <div class="amain"><img src="img/about-faro1.jpg" alt="Faro Cafe Space"/></div>
+                     
+                     <div class="amain swiper aboutSwiper">
+                        <div class="swiper-wrapper">
+                           <div class="swiper-slide">
+                              <img src="img/about-faro1.jpg" alt="Không gian Faro Cafe 1"/>
+                           </div>
+                           <div class="swiper-slide">
+                              <img src="img/about-faro3.jpg" alt="Không gian Faro Cafe 2"/>
+                           </div>
+                           <div class="swiper-slide">
+                              <img src="img/about-faro4.jpg" alt="Không gian Faro Cafe 3"/>
+                           </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                     </div>
+                     
                      <div class="asm"><img src="img/about-faro2.jpg" alt="Faro Specialty Coffee"/></div>
                   </div>
                </div>
+               
                <div class="col-lg-7" data-aos="fade-left">
                   <span class="slbl">Hành Trình Faro</span>
-                  <!-- Đổi từ Food Restaurant sang Coffee Space -->
                   <h2 class="stitle text-start">Chào Bạn Đến Với<br/>Không Gian <span>Faro Cafe</span></h2>
                   <div class="sline lft"></div>
                   
-                  <!-- Sửa lại đoạn mô tả phù hợp với Faro -->
                   <p class="sdesc mb-4">Được thành lập từ năm 2024, Faro Cafe không chỉ là một quán cà phê, mà là nơi kết nối những tâm hồn đồng điệu, khơi nguồn cảm hứng làm việc và sẻ chia những góc nhìn sâu sắc về cuộc sống qua từng ly nước mộc mạc.</p>
                   
                   <div class="mb-4">
-                     <!-- Tiêu chí 1: Hạt mộc chất lượng -->
                      <div class="fti">
                         <div class="ftico r"><i class="fas fa-seedling"></i></div>
                         <div>
@@ -314,7 +327,6 @@
                         </div>
                      </div>
                      
-                     <!-- Tiêu chí 2: Không gian trải nghiệm -->
                      <div class="fti">
                         <div class="ftico y"><i class="fas fa-laptop-house"></i></div>
                         <div>
@@ -323,7 +335,6 @@
                         </div>
                      </div>
                      
-                     <!-- Tiêu chí 3: Cộng đồng & Insight -->
                      <div class="fti">
                         <div class="ftico g"><i class="fas fa-lightbulb"></i></div>
                         <div>
@@ -333,7 +344,6 @@
                      </div>
                   </div>
                   
-                  <!-- Nút kêu gọi hành động -->
                   <a href="#menu" class="btn-red"><i class="fas fa-mug-hot"></i>Khám Phá Menu Ngay</a>
                </div>
             </div>
@@ -346,13 +356,13 @@
       <section id="menu">
          <div class="container">
             <div class="text-center mb-5" data-aos="fade-up">
-               <span class="slbl">What's Cooking</span>
-               <h2 class="stitle">Our Delicious <span>Menu</span></h2>
+               <span class="slbl">Hương Vị Tinh Tế</span>
+               <h2 class="stitle">Khám Phá <span>Menu Faro</span></h2>
                <div class="sline"></div>
             </div>
-            <!-- FIX 3 � filter buttons -->
+            
             <div class="text-center mb-4" data-aos="fade-up">
-               <button class="filtbtn active" data-f="all">All</button>
+               <button class="filtbtn active" data-f="all">Tất Cả</button>
                <button class="filtbtn" data-f="cafes">Cafe</button>
                <button class="filtbtn" data-f="dam-ban-vi">Đậm Bản Vị</button>
                <button class="filtbtn" data-f="lattes">Latte</button>
@@ -362,189 +372,190 @@
                <button class="filtbtn" data-f="trai-cay-tuoi">Trái Cây Tươi</button>
                <button class="filtbtn" data-f="banh-ngot-tuoi">Bánh Ngọt Tươi</button>
             </div>
+            
             <div class="row g-4" id="mgrid">
-               <!-- CARD 1: cafes -->
                <div class="col-sm-6 col-lg-4 mwrap" data-c="cafes" data-aos="fade-up">
                   <div class="mcard"
                      data-img="img/menu/1.webp"
-                     data-title="Classic Smash Burger"
-                     data-cat="Burgers"
-                     data-price="$14.99" data-old="$18.99"
-                     data-rating="4.9" data-reviews="128"
-                     data-cal="620" data-time="12"
-                     data-desc="Double smashed patty, cheddar cheese, caramelized onions, house pickles and our legendary special sauce. Made fresh to order on a toasted brioche bun."
-                     data-tags="Spicy,Bestseller,Beef">
+                     data-title="Cà Phê Sữa Đá Faro"
+                     data-cat="Cafe"
+                     data-price="39.000 đ" data-old="45.000 đ"
+                     data-rating="4.9" data-reviews="184"
+                     data-cal="150" data-time="3"
+                     data-desc="Cà phê hạt Robusta Thượng Hạng được phối trộn theo công thức riêng, rang mộc hoàn toàn, kết hợp với sữa đặc béo ngậy tạo nên hương vị đậm đà chuẩn vị truyền thống."
+                     data-tags="Truyền Thống,Đậm Đà,Bestseller">
                      <div class="mimg">
-                        <img src="img/menu/1.webp" alt="Smash Burger"/>
-                        <div class="mbdg hot"><i class="fas fa-star"></i> Hot</div>
+                        <img src="img/menu/1.webp" alt="Cà Phê"/>
+                        <div class="mbdg hot"><i class="fas fa-fire"></i> Hot</div>
                         <div class="mhrt"><i class="far fa-heart"></i></div>
                      </div>
                      <div class="mbody">
                         <div class="mcat">Cafe</div>
-                        <div class="mtit">Classic Smash Burger</div>
-                        <div class="mdesc">Double smashed patty, cheddar, caramelized onions, pickles &amp; special sauce</div>
+                        <div class="mtit">Cà Phê</div>
+                        <div class="mdesc">Robusta thượng hạng rang mộc, kết hợp sữa đặc béo ngậy chuẩn vị truyền thống</div>
                         <div class="mfoot">
                            <div>
-                              <div class="mprice">75.000 đ</div>
-                              <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(128)</span></div>
+                              <div class="mprice">39.000 đ</div>
+                              <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(184)</span></div>
                            </div>
-                           <button class="madd" title="View Details">Xem thêm</button>
+                           <button class="madd" title="Xem Chi Tiết">Xem thêm</button>
                         </div>
                      </div>
                   </div>
                </div>
-               <!-- CARD 2: dam-ban-vi -->
+               
                <div class="col-sm-6 col-lg-4 mwrap" data-c="dam-ban-vi" data-aos="fade-up" data-aos-delay="80">
                   <div class="mcard"
                      data-img="img/menu/2.webp"
-                     data-title="Margherita Royale"
-                     data-cat="Pizza"
-                     data-price="$19.99" data-old="$24.99"
-                     data-rating="4.8" data-reviews="95"
-                     data-cal="480" data-time="18"
-                     data-desc="San Marzano tomatoes, fresh buffalo mozzarella, fragrant basil leaves, drizzled with Italian truffle oil on a hand-stretched sourdough base."
-                     data-tags="Vegetarian,New,Italian">
+                     data-title="Cà Phê Muối Biển"
+                     data-cat="Đậm Bản Vị"
+                     data-price="45.000 đ" data-old=""
+                     data-rating="4.8" data-reviews="120"
+                     data-cal="180" data-time="4"
+                     data-desc="Sự kết hợp đầy phá cách giữa vị đắng thanh của cốt cà phê phin nguyên chất cùng lớp kem mặn phô mai muối biển mịn màng, mang lại trải nghiệm hậu vị lôi cuốn."
+                     data-tags="Bestseller,Đậm Vị,Kem Mặn">
                      <div class="mimg">
-                        <img src="img/menu/2.webp" alt="Pizza"/>
-                        <div class="mbdg new"><i class="fas fa-star"></i> New</div>
-                        <div class="mhrt"><i class="far fa-heart"></i></div>
-                     </div>
-                     <div class="mbody">
-                        <div class="mcat">Đậm Bản Vị</div>
-                        <div class="mtit">Margherita Royale</div>
-                        <div class="mdesc">San Marzano tomatoes, buffalo mozzarella, basil &amp; truffle oil on sourdough</div>
-                        <div class="mfoot">
-                           <div>
-                              <div class="mprice">65.000 đ</div>
-                              <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(95)</span></div>
-                           </div>
-                           <button class="madd" title="View Details">Xem thêm</button>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <!-- CARD 3: lattes -->
-               <div class="col-sm-6 col-lg-4 mwrap" data-c="lattes" data-aos="fade-up" data-aos-delay="160">
-                  <div class="mcard"
-                     data-img="img/menu/3.webp"
-                     data-title="Nashville Hot Chicken"
-                     data-cat="Chicken"
-                     data-price="$12.99" data-old="$16.99"
-                     data-rating="5.0" data-reviews="210"
-                     data-cal="710" data-time="15"
-                     data-desc="Extra-crispy fried chicken tossed in our signature fiery Nashville spice blend, served with honey drizzle and house pickles on a toasted brioche bun."
-                     data-tags="Spicy,Bestseller,Crispy">
-                     <div class="mimg">
-                        <img src="img/menu/3.webp" alt="Chicken"/>
+                        <img src="img/menu/2.webp" alt="Cà Phê Muối Biển"/>
                         <div class="mbdg"><i class="fas fa-star"></i> Best Seller</div>
                         <div class="mhrt"><i class="far fa-heart"></i></div>
                      </div>
                      <div class="mbody">
-                        <div class="mcat">Latte</div>
-                        <div class="mtit">Nashville Hot Chicken</div>
-                        <div class="mdesc">Crispy fried chicken in fiery Nashville spice blend with honey drizzle</div>
+                        <div class="mcat">Đậm Bản Vị</div>
+                        <div class="mtit">Thanh Mai Mơ</div>
+                        <div class="mdesc">Cốt cà phê phin đậm đà hòa quyện cùng lớp kem mặn muối biển béo ngậy mịn màng</div>
                         <div class="mfoot">
                            <div>
-                              <div class="mprice">55.000 đ</div>
-                              <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(210)</span></div>
+                              <div class="mprice">45.000 đ</div>
+                              <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(120)</span></div>
                            </div>
-                           <button class="madd" title="View Details">Xem thêm</button>
+                           <button class="madd" title="Xem Chi Tiết">Xem thêm</button>
                         </div>
                      </div>
                   </div>
                </div>
-               <!-- CARD 4: coldbrews -->
-               <div class="col-sm-6 col-lg-4 mwrap" data-c="coldbrews" data-aos="fade-up">
+               
+               <div class="col-sm-6 col-lg-4 mwrap" data-c="lattes" data-aos="fade-up" data-aos-delay="160">
                   <div class="mcard"
-                     data-img="img/menu/4.webp"
-                     data-title="Loaded Fajita Wrap"
-                     data-cat="Wraps"
-                     data-price="$10.99" data-old=""
-                     data-rating="4.5" data-reviews="74"
-                     data-cal="520" data-time="10"
-                     data-desc="Grilled chicken strips, saut�ed bell peppers and onions, sour cream, fresh guacamole and salsa wrapped in a warm flour tortilla with melted cheddar."
-                     data-tags="Grilled,Fresh,Mexican">
+                     data-img="img/menu/3.webp"
+                     data-title="Salted Caramel Latte"
+                     data-cat="Latte"
+                     data-price="55.000 đ" data-old="65.000 đ"
+                     data-rating="5.0" data-reviews="95"
+                     data-cal="210" data-time="5"
+                     data-desc="Cà phê Espresso Specialty 100% Arabica hòa quyện cùng sữa tươi thanh trùng đánh nóng mượt mà và sốt caramel mặn hoàng gia quyến rũ."
+                     data-tags="Espresso,Ngọt Dịu,Arabica">
                      <div class="mimg">
-                        <img src="img/menu/4.webp" alt="Wrap"/>
-                        <div class="mhrt"><i class="far fa-heart"></i></div>
-                     </div>
-                     <div class="mbody">
-                        <div class="mcat">Cold Brew</div>
-                        <div class="mtit">Loaded Fajita Wrap</div>
-                        <div class="mdesc">Grilled chicken, peppers, sour cream &amp; guacamole in a warm tortilla</div>
-                        <div class="mfoot">
-                           <div>
-                              <div class="mprice">70.000 đ</div>
-                              <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(74)</span></div>
-                           </div>
-                           <button class="madd" title="View Details">Xem thêm</button>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <!-- CARD 5: tra-thao-moc -->
-               <div class="col-sm-6 col-lg-4 mwrap" data-c="tra-thao-moc" data-aos="fade-up" data-aos-delay="80">
-                  <div class="mcard"
-                     data-img="img/menu/5.webp"
-                     data-title="Nutella Lava Cake"
-                     data-cat="Desserts"
-                     data-price="$8.99" data-old="$11.99"
-                     data-rating="4.9" data-reviews="56"
-                     data-cal="390" data-time="8"
-                     data-desc="Warm molten chocolate cake with a gooey Nutella center, served alongside Madagascar vanilla bean ice cream with salted caramel drizzle and fresh berries."
-                     data-tags="Sweet,New,Chocolate">
-                     <div class="mimg">
-                        <img src="img/menu/5.webp" alt="Lava Cake"/>
+                        <img src="img/menu/3.webp" alt="Salted Caramel Latte"/>
                         <div class="mbdg new"><i class="fas fa-star"></i> New</div>
                         <div class="mhrt"><i class="far fa-heart"></i></div>
                      </div>
                      <div class="mbody">
-                        <div class="mcat">Trà Thảo Mộc</div>
-                        <div class="mtit">Nutella Lava Cake</div>
-                        <div class="mdesc">Molten chocolate cake with Nutella center, vanilla ice cream &amp; caramel</div>
+                        <div class="mcat">Latte</div>
+                        <div class="mtit">Latte</div>
+                        <div class="mdesc">Espresso Arabica nguyên chất, sữa tươi thanh trùng và sốt caramel mặn ngọt dịu</div>
                         <div class="mfoot">
                            <div>
-                              <div class="mprice">60.000 đ</div>
-                              <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(56)</span></div>
+                              <div class="mprice">55.000 đ</div>
+                              <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(95)</span></div>
                            </div>
-                           <button class="madd" title="View Details">Xem thêm</button>
+                           <button class="madd" title="Xem Chi Tiết">Xem thêm</button>
                         </div>
                      </div>
                   </div>
                </div>
-               <!-- CARD 6: tra-sua -->
-               <div class="col-sm-6 col-lg-4 mwrap" data-c="tra-sua" data-aos="fade-up" data-aos-delay="160">
+               
+               <div class="col-sm-6 col-lg-4 mwrap" data-c="coldbrews" data-aos="fade-up">
                   <div class="mcard"
-                     data-img="img/menu/6.webp"
-                     data-title="Truffle Mushroom Pasta"
-                     data-cat="Pasta"
-                     data-price="$16.99" data-old=""
-                     data-rating="4.9" data-reviews="88"
-                     data-cal="560" data-time="20"
-                     data-desc="Al dente tagliatelle tossed with mixed wild mushrooms, freshly shaved black truffle, aged parmesan, fresh thyme and a touch of cream in garlic butter."
-                     data-tags="Vegetarian,Chef's Pick,Italian">
+                     data-img="img/menu/4.webp"
+                     data-title="Cold Brew Cam Sả"
+                     data-cat="Cold Brew"
+                     data-price="49.000 đ" data-old=""
+                     data-rating="4.7" data-reviews="82"
+                     data-cal="90" data-time="4"
+                     data-desc="Cà phê ủ lạnh tinh khiết suốt 16 giờ từ hạt Arabica Cầu Đất, kết hợp cùng nước ép cam vàng tươi và hương sả thoang thoảng mang lại cảm giác sảng khoái thanh mát."
+                     data-tags="Ủ Lạnh,Thanh Mát,Fresh">
                      <div class="mimg">
-                        <img src="img/menu/6.webp" alt="Pasta"/>
-                        <div class="mbdg hot">Chef's Pick</div>
+                        <img src="img/menu/4.webp" alt="Cold Brew Cam Sả"/>
                         <div class="mhrt"><i class="far fa-heart"></i></div>
                      </div>
                      <div class="mbody">
-                        <div class="mcat">Trà Sữa</div>
-                        <div class="mtit">Truffle Mushroom Pasta</div>
-                        <div class="mdesc">Al dente tagliatelle, wild mushrooms, black truffle, parmesan &amp; thyme</div>
+                        <div class="mcat">Cold Brew</div>
+                        <div class="mtit">Cold Brew Cam Sả</div>
+                        <div class="mdesc">Cà phê ủ lạnh tinh khiết 16 giờ kết hợp nước cam vàng và hương sả thanh mượt</div>
                         <div class="mfoot">
                            <div>
-                              <div class="mprice">80.000 đ</div>
-                              <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(88)</span></div>
+                              <div class="mprice">49.000 đ</div>
+                              <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(82)</span></div>
                            </div>
-                           <button class="madd" title="View Details">Xem thêm</button>
+                           <button class="madd" title="Xem Chi Tiết">Xem thêm</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               
+               <div class="col-sm-6 col-lg-4 mwrap" data-c="tra-thao-moc" data-aos="fade-up" data-aos-delay="80">
+                  <div class="mcard"
+                     data-img="img/menu/5.webp"
+                     data-title="Trà Hoa Đậu Biếc Macchiato"
+                     data-cat="Trà Thảo Mộc"
+                     data-price="48.000 đ" data-old=""
+                     data-rating="4.9" data-reviews="64"
+                     data-cal="120" data-time="4"
+                     data-desc="Cốt trà thảo mộc hoa đậu biếc thanh khiết sở hữu sắc tím tự nhiên mơ màng, phủ lên trên lớp kem Macchiato sánh mịn, béo ngậy khó cưỡng."
+                     data-tags="Thảo Mộc,Kem Sữa,Healthy">
+                     <div class="mimg">
+                        <img src="img/menu/5.webp" alt="Trà Hoa Đậu Biếc Macchiato"/>
+                        <div class="mbdg hot">Được Yêu Thích</div>
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                     </div>
+                     <div class="mbody">
+                        <div class="mcat">Trà Thảo Mộc</div>
+                        <div class="mtit">Trà Ngũ Đậu Rang</div>
+                        <div class="mdesc">Trà thảo mộc thanh khiết mang sắc tím tự nhiên kết hợp bọt kem béo ngậy</div>
+                        <div class="mfoot">
+                           <div>
+                              <div class="mprice">48.000 đ</div>
+                              <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(64)</span></div>
+                           </div>
+                           <button class="madd" title="Xem Chi Tiết">Xem thêm</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               
+               <div class="col-sm-6 col-lg-4 mwrap" data-c="banh-ngot-tuoi" data-aos="fade-up" data-aos-delay="160">
+                  <div class="mcard"
+                     data-img="img/menu/6.webp"
+                     data-title="Bánh Sừng Bò Hạnh Nhân"
+                     data-cat="Bánh Ngọt Tươi"
+                     data-price="35.000 đ" data-old="40.000 đ"
+                     data-rating="4.9" data-reviews="112"
+                     data-cal="310" data-time="5"
+                     data-desc="Bánh sừng bò nướng chín vàng giòn rụm với cấu trúc ngàn lớp đượm mùi bơ Pháp cao cấp, phủ ngập lớp hạnh nhân lát thơm bùi và đường bột tinh tế."
+                     data-tags="Bánh Tươi,Giòn Rụm,Bơ Pháp">
+                     <div class="mimg">
+                        <img src="img/menu/6.webp" alt="Bánh Sừng Bò Hạnh Nhân"/>
+                        <div class="mbdg hot"><i class="fas fa-star"></i> Thử Ngay</div>
+                        <div class="mhrt"><i class="far fa-heart"></i></div>
+                     </div>
+                     <div class="mbody">
+                        <div class="mcat">Bánh Ngọt Tươi</div>
+                        <div class="mtit">Bánh Sừng Bò Hạnh Nhân</div>
+                        <div class="mdesc">Bánh nướng ngàn lớp giòn rụm đượm mùi bơ Pháp, phủ hạnh nhân lát thơm bùi</div>
+                        <div class="mfoot">
+                           <div>
+                              <div class="mprice">35.000 đ</div>
+                              <div class="mstars"><i class="fas fa-star"></i> <span style="color:#bbb;font-size:.7rem;">(112)</span></div>
+                           </div>
+                           <button class="madd" title="Xem Chi Tiết">Xem thêm</button>
                         </div>
                      </div>
                   </div>
                </div>
             </div>
-            <!-- end #mgrid -->
-            <div class="text-center mt-5"><a href="#" class="btn-red"><i class="fas fa-th-large"></i>View Full Menu</a></div>
+            <div class="text-center mt-5">
+               <a href="#" class="btn-red"><i class="fas fa-th-large"></i> Xem Thực Đơn Đầy Đủ</a>
+            </div>
          </div>
       </section>
 	  
@@ -574,32 +585,6 @@
             </div>
          </div>
       </div>
-      <!-- SPECIAL OFFER -->
-      <!-- <section id="special">
-         <div class="spbg"></div>
-         <div class="container" style="position:relative;z-index:2;">
-            <div class="row align-items-center g-5">
-               <div class="col-lg-6" data-aos="fade-right">
-                  <div class="sptag"><i class="fas fa-bolt me-1"></i>Limited Time Offer</div>
-                  <h2 class="sptitle">Get 30% Off<br/>Our Signature<br/><span>Burger</span> Meal</h2>
-                  <p class="spdesc">Don't miss our weekend special - grab our award-winning signature burger combo with loaded fries and a premium shake at an unbeatable price.</p>
-                  <div class="cdwrap">
-                     <div class="cditem"><span class="cdnum" id="cdH">08</span><span class="cdlbl">Hours</span></div>
-                     <div class="cditem"><span class="cdnum" id="cdM">45</span><span class="cdlbl">Minutes</span></div>
-                     <div class="cditem"><span class="cdnum" id="cdS">30</span><span class="cdlbl">Seconds</span></div>
-                  </div>
-                  <a href="#menu" class="btn-red"><i class="fas fa-shopping-cart"></i>Grab the Deal</a>
-               </div>
-               <div class="col-lg-6" data-aos="fade-left">
-                  <div class="spimgw">
-                     <div class="spglow"></div>
-                     <div class="sppbdg"><span class="old">$24.99</span><span class="np">$17.49</span></div>
-                     <img src="img/off-img.jpg" alt="Special Burger"/>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section> -->
 
       <section id="special">
          <div class="spbg"></div>
@@ -647,66 +632,70 @@
       <section id="gallery">
          <div class="container">
             <div class="text-center mb-5" data-aos="fade-up">
-               <span class="slbl">Food Showcase</span>
-               <h2 class="stitle">Let's See Our <span>Fast Food</span></h2>
+               <span class="slbl">Khoảnh Khắc Faro</span>
+               <h2 class="stitle">Góc Nhỏ <span>Không Gian & Con Người</span></h2>
                <div class="sline"></div>
             </div>
             <div class="ggrid" data-aos="fade-up">
                <div class="gitem"
                   data-gi="0"
-                  data-gimg="img/portfolio/1.webp"
-                  data-gtitle="Gourmet Burgers"
-                  data-gdesc="Our award-winning smash burgers, hand-crafted with 100% premium beef, aged cheddar and house-made sauces.">
-                  <img src="img/portfolio/1.webp" alt="Burgers"/>
-                  <div class="gover"><span><i class="fas fa-expand-alt"></i> Gourmet Burgers</span></div>
+                  data-gimg="img/portfolio/portfolio1.jpg"
+                  data-gtitle="Không Gian Cảm Hứng"
+                  data-gdesc="Thiết kế ngập tràn ánh sáng tự nhiên, sắc xanh dịu mát hòa cùng hương cà phê phảng phất, tạo nên một góc làm việc và thư giãn lý tưởng.">
+                  <img src="img/portfolio/portfolio1.jpg" alt="Không gian Faro Cafe"/>
+                  <div class="gover"><span><i class="fas fa-expand-alt"></i> Không Gian Cảm Hứng</span></div>
                </div>
+               
                <div class="gitem"
                   data-gi="1"
-                  data-gimg="img/portfolio/2.webp"
-                  data-gtitle="Wood-Fired Pizza"
-                  data-gdesc="Authentic Neapolitan-style pizzas fired at 900deg F in our wood-burning stone oven for the perfect char.">
-                  <img src="img/portfolio/2.webp" alt="Pizza"/>
-                  <div class="gover"><span><i class="fas fa-expand-alt"></i> Wood-Fired Pizza</span></div>
+                  data-gimg="img/portfolio/portfolio2.jpg"
+                  data-gtitle="Nghệ Thuật Pha Chế"
+                  data-gdesc="Sự tỉ mỉ và tâm huyết gửi gắm trong từng giọt Espresso nguyên chất từ đội ngũ Barista nhà Faro, mang đến hương vị chuẩn mực nhất.">
+                  <img src="img/portfolio/portfolio2.jpg" alt="Barista Faro Cafe"/>
+                  <div class="gover"><span><i class="fas fa-expand-alt"></i> Nghệ Thuật Pha Chế</span></div>
                </div>
+               
                <div class="gitem"
                   data-gi="2"
-                  data-gimg="img/portfolio/3.webp"
-                  data-gtitle="Crispy Fried Chicken"
-                  data-gdesc="Double-brined, hand-battered chicken fried to golden perfection using our 15-spice secret blend.">
-                  <img src="img/portfolio/3.webp" alt="Chicken"/>
-                  <div class="gover"><span><i class="fas fa-expand-alt"></i> Crispy Fried Chicken</span></div>
+                  data-gimg="img/portfolio/portfolio3.jpg"
+                  data-gtitle="Trải Nghiệm Pour Over"
+                  data-gdesc="Khám phá những nốt hương hoa quả phong phú ẩn giấu trong hạt Arabica Specialty thông qua phương pháp pha thủ công V60 đầy tinh tế.">
+                  <img src="img/portfolio/portfolio3.jpg" alt="Pha chế Pour Over"/>
+                  <div class="gover"><span><i class="fas fa-expand-alt"></i> Trải Nghiệm Pour Over</span></div>
                </div>
+               
                <div class="gitem"
                   data-gi="3"
-                  data-gimg="img/portfolio/4.webp"
-                  data-gtitle="Sweet Desserts"
-                  data-gdesc="Handcrafted desserts - from molten lava cakes to artisan ice cream sundaes and seasonal pastries.">
-                  <img src="img/portfolio/4.webp" alt="Desserts"/>
-                  <div class="gover"><span><i class="fas fa-expand-alt"></i> Sweet Desserts</span></div>
+                  data-gimg="img/portfolio/portfolio4.jpg"
+                  data-gtitle="Bánh Ngọt Tươi Mỗi Ngày"
+                  data-gdesc="Những mẻ bánh sừng bò, bánh tart nướng chín vàng giòn rụm, đượm mùi bơ Pháp – mảnh ghép hoàn hảo khi thưởng thức cùng tách cà phê.">
+                  <img src="img/portfolio/portfolio4.jpg" alt="Bánh ngọt tươi Faro"/>
+                  <div class="gover"><span><i class="fas fa-expand-alt"></i> Bánh Ngọt Tươi Ra Lò</span></div>
                </div>
+               
                <div class="gitem"
                   data-gi="4"
-                  data-gimg="img/portfolio/5.webp"
-                  data-gtitle="Fresh Wraps &amp; Rolls"
-                  data-gdesc="Loaded fresh wraps packed with grilled proteins, crunchy vegetables and our house-made sauces.">
-                  <img src="img/portfolio/5.webp" alt="Wraps"/>
-                  <div class="gover"><span><i class="fas fa-expand-alt"></i> Fresh Wraps &amp; Rolls</span></div>
+                  data-gimg="img/portfolio/portfolio5.jpg"
+                  data-gtitle="Kết Nối & Sẻ Chia"
+                  data-gdesc="Nơi phảng phất những tiếng cười, những buổi hẹn hò, những góc nhìn sâu sắc về cuộc sống được sẻ chia bên những ly nước mộc mạc.">
+                  <img src="img/portfolio/portfolio5.jpg" alt="Kết nối tại Faro"/>
+                  <div class="gover"><span><i class="fas fa-expand-alt"></i> Kết Nối & Sẻ Chia</span></div>
                </div>
             </div>
          </div>
       </section>
-      <!-- FIX 7 � GALLERY POPUP -->
+
       <div id="galPop">
          <div class="gpbox">
-            <button class="gpclose" id="gpClose"><i class="fas fa-times"></i></button>
-            <img id="gpImg" src="" alt=""/>
+            <button class="gpclose" id="gpClose" title="Đóng"><i class="fas fa-times"></i></button>
+            <img id="gpImg" src="" alt="Faro Showcase"/>
             <div class="gpcap">
                <h5 id="gpTitle"></h5>
                <p id="gpDesc"></p>
             </div>
             <div class="gpnav">
-               <button id="gpPrev"><i class="fas fa-chevron-left me-1"></i>Prev</button>
-               <button id="gpNext">Next <i class="fas fa-chevron-right ms-1"></i></button>
+               <button id="gpPrev"><i class="fas fa-chevron-left me-1"></i>Trước</button>
+               <button id="gpNext">Sau <i class="fas fa-chevron-right ms-1"></i></button>
             </div>
          </div>
       </div>

@@ -629,17 +629,33 @@ section {
 .astack {
   position: relative;
 }
+/* Cập nhật thuộc tính để phù hợp với cơ chế Swiper */
 .amain {
   border-radius: 18px;
   overflow: hidden;
   box-shadow: var(--shadow-lg);
-}
-.amain img {
+  position: relative;
   width: 100%;
-  height: 440px;
+}
+.amain .swiper-slide img {
+  width: 100%;
+  height: 440px; /* Đảm bảo tất cả ảnh trong slide đều cao bằng nhau */
   object-fit: cover;
   display: block;
 }
+/* Tùy chỉnh màu sắc nút chấm điều hướng của Slide */
+.amain .swiper-pagination-bullet-active {
+  background: var(--primary) !important;
+}
+.amain .swiper-pagination-bullet {
+  background: #fff;
+  opacity: 0.7;
+}
+.amain .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+/* Các class khác giữ nguyên cấu trúc của bạn */
 .asm {
   position: absolute;
   bottom: -26px;
@@ -650,6 +666,7 @@ section {
   overflow: hidden;
   border: 5px solid #fff;
   box-shadow: var(--shadow);
+  z-index: 10; /* Đẩy ảnh nhỏ lên trên slide */
 }
 .asm img {
   width: 100%;
@@ -666,6 +683,7 @@ section {
   padding: 18px 22px;
   text-align: center;
   box-shadow: 0 10px 28px rgba(232, 40, 26, 0.4);
+  z-index: 10; /* Đẩy khối năm thành lập lên trên slide */
 }
 .aexp .anum {
   font-family: "Playfair Display", serif;

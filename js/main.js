@@ -472,3 +472,20 @@ jQuery(document).ready(function($) {
         }, slideInterval);
     }
 });
+
+// Khởi tạo Swiper Slide cho phần Giới thiệu (About)
+const aboutSwiper = new Swiper('.aboutSwiper', {
+  loop: true,               // Chạy lặp lại vô hạn
+  autoplay: {
+    delay: 3000,            // Tự động chuyển hình sau 3 giây
+    disableOnInteraction: false,
+  },
+  effect: 'fade',           // Hiệu ứng mờ dần sang trọng (thay vì lướt ngang cục mịch)
+  fadeEffect: {
+    crossFade: true
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,        // Cho phép click vào dấu chấm để chuyển hình
+  },
+});
