@@ -73,22 +73,28 @@ function closeSearch() {
     document.body.style.overflow = '';
 }
 
-// Category buttons inside search box
+// Thay đổi trạng thái active khi chọn Ngôn ngữ và đóng bảng chọn
 document.querySelectorAll('.sovcat').forEach(function(btn) {
-    btn.addEventListener('click', function() {
+    btn.addEventListener('click', function(e) {
+        // Ngăn chặn hành vi mặc định (nếu nút bấm vô tình là thẻ liên kết)
+        e.preventDefault(); 
+        
+        // 1. Xóa class active ở nút ngôn ngữ cũ
         document.querySelectorAll('.sovcat').forEach(function(b) {
             b.classList.remove('active');
         });
+        
+        // 2. Thêm class active vào ngôn ngữ vừa được chọn
         this.classList.add('active');
-        var f = this.getAttribute('data-cat');
+        
+        // Lấy mã ngôn ngữ (ví dụ: 'vi' hoặc 'en') phòng khi sau này bạn cần dùng để chuyển đổi text
+        var selectedLang = this.getAttribute('data-lang'); 
+        
+        // 3. Đóng popup chọn ngôn ngữ (giữ nguyên hàm closeSearch của template cũ)
         closeSearch();
-        setTimeout(function() {
-            filterMenu(f);
-            document.getElementById('menu').scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }, 300);
+        
+        // (Tùy chọn) Nếu sau này bạn có viết hàm chuyển đổi ngôn ngữ, bạn có thể gọi ở đây:
+        // changeLanguage(selectedLang);
     });
 });
 

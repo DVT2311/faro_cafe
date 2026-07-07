@@ -82,12 +82,9 @@
                   <li class="nav-item"><a class="nav-link" href="#testimonials">Đánh giá</a></li>
                   <li class="nav-item"><a class="nav-link" href="#reservation">Đặt tiệc Tea Break</a></li>
                   <li class="nav-item"><a class="nav-link" href="#contact-section">Liên hệ</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Faro group</a></li>
                </ul>
                <div class="d-flex align-items-center gap-1">
-                  <button id="navSearchBtn" title="Thay đổi ngôn ngữ / Change Language">
-                     <i class="fas fa-globe"></i>
-                  </button>
+                  <button id="navSearchBtn" title="Tìm kiếm"><i class="fas fa-search"></i></button>
                </div>
             </div>
          </div>
@@ -95,34 +92,46 @@
       <!-- ============================================================
          FIX 1 � SEARCH OVERLAY POPUP
          ============================================================ -->
-<!-- ============================================================
-         LANGUAGE SELECTION OVERLAY POPUP
-         ============================================================ -->
       <div id="searchOv">
-         <!-- Nút đóng popup -->
-         <button class="sovclose" id="searchClose" title="Đóng"><i class="fas fa-times"></i></button>
-         
-         <div class="sovbox text-center">
-            <div class="lang-globe-icon mb-3">
-               <i class="fas fa-globe"></i>
+         <button class="sovclose" id="searchClose"><i class="fas fa-times"></i></button>
+         <div class="sovbox">
+            <h4>What are you craving today?</h4>
+            <div class="sovinput">
+               <input type="text" id="searchInput" placeholder="Search burgers, pizza, chicken..." autocomplete="off"/>
+               <button><i class="fas fa-search"></i></button>
             </div>
-            <h4>Chọn ngôn ngữ của bạn / Select your language</h4>
-            <p class="text-muted small mb-4">Thay đổi ngôn ngữ hiển thị trên toàn bộ hệ thống website Faro Cafe</p>
-            
-            <!-- Danh sách các ngôn ngữ để người dùng lựa chọn -->
-            <div class="sovcats justify-content-center">
-               <div class="sovcat active" data-lang="vi">
-                  <span class="lang-flag">🇻🇳</span>Tiếng Việt
+            <!-- Categories inside search box -->
+            <div class="sovcats">
+               <div class="sovcat active" data-cat="all">
+                  <img src="img/menu/1.jpg" alt=""/>All Items
                </div>
-               <div class="sovcat" data-lang="en">
-                  <span class="lang-flag">🇺🇸</span>English
+               <div class="sovcat" data-cat="burgers">
+                  <img src="img/menu/1.jpg" alt=""/>Burgers
+               </div>
+               <div class="sovcat" data-cat="pizza">
+                  <img src="img/menu/2.jpg" alt=""/>Pizza
+               </div>
+               <div class="sovcat" data-cat="chicken">
+                  <img src="img/menu/3.jpg" alt=""/>Chicken
+               </div>
+               <div class="sovcat" data-cat="wraps">
+                  <img src="img/menu/4.jpg" alt=""/>Wraps
+               </div>
+               <div class="sovcat" data-cat="pasta">
+                  <img src="img/menu/5.jpg" alt=""/>Pasta
+               </div>
+               <div class="sovcat" data-cat="desserts">
+                  <img src="img/menu/6.jpg" alt=""/>Desserts
                </div>
             </div>
-            
-            <!-- Gợi ý các vùng nhanh hoặc ghi chú hệ thống -->
-            <div class="sovtrend mt-4">
-               <p><i class="fas fa-info-circle me-1" style="color:var(--primary);"></i> Ghi chú / Note</p>
-               <span class="ttag">Hệ thống tự động lưu tùy chọn của bạn cho lần truy cập sau</span>
+            <div class="sovtrend">
+               <p><i class="fas fa-fire me-1" style="color:var(--secondary);"></i>Trending Searches</p>
+               <span class="ttag">Smash Burger</span>
+               <span class="ttag">Nashville Chicken</span>
+               <span class="ttag">Truffle Pizza</span>
+               <span class="ttag">Lava Cake</span>
+               <span class="ttag">Loaded Fries</span>
+               <span class="ttag">Mango Shake</span>
             </div>
          </div>
       </div>
@@ -211,8 +220,8 @@
       <section id="category">
          <div class="container">
             <div class="text-center mb-5" data-aos="fade-up">
-               <span class="slbl">Khơi Nguồn Cảm Hứng</span>
-               <h2 class="stitle">Thưởng Thức <span>Hương Vị Faro</span></h2>
+               <span class="slbl">What We Offer</span>
+               <h2 class="stitle">Browse by <span>Category</span></h2>
                <div class="sline"></div>
                <p class="sdesc mx-auto" style="max-width:480px;">Từ những ly Cold Brew mộc mạc đến các dòng trà trái cây thanh mát — tìm thấy hương vị yêu thích của bạn tại Faro.</p>
             </div>
@@ -296,7 +305,7 @@
                   </div>
                </div>
                <div class="col-lg-7" data-aos="fade-left">
-                  <span class="slbl">Hành Trình Faro</span>
+                  <span class="slbl">Our Story</span>
                   <!-- Đổi từ Food Restaurant sang Coffee Space -->
                   <h2 class="stitle text-start">Chào Bạn Đến Với<br/>Không Gian <span>Faro Cafe</span></h2>
                   <div class="sline lft"></div>
@@ -888,6 +897,78 @@
             </div>
          </div>
       </section>
+	  
+      <!-- BLOG -->
+      <!-- <section id="blog">
+         <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+               <span class="slbl">News &amp; Updates</span>
+               <h2 class="stitle">Our Latest <span>Blog</span> Posts</h2>
+               <div class="sline"></div>
+            </div>
+            <div class="row g-4">
+               <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                  <div class="blcard">
+                     <div class="blimg">
+                        <img src="img/blog/1.jpg" alt=""/>
+                        <div class="bldatebdg"><span class="bd">14</span><span class="bm">Mar</span></div>
+                     </div>
+                     <div class="blbody">
+                        <div class="bltag">Food &amp; Health</div>
+                        <div class="bltit"><a href="#">Healthy Fast Food: A Myth or Beautiful Reality</a></div>
+                        <div class="blmeta"><span><i class="fas fa-user"></i>James Writer</span><span><i class="fas fa-comment"></i>24 Comments</span></div>
+                        <a href="#" class="blmore">Read More <i class="fas fa-arrow-right"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+                  <div class="blcard">
+                     <div class="blimg">
+                        <img src="img/blog/2.jpg" alt=""/>
+                        <div class="bldatebdg"><span class="bd">28</span><span class="bm">Feb</span></div>
+                     </div>
+                     <div class="blbody">
+                        <div class="bltag">Food Science</div>
+                        <div class="bltit"><a href="#">Is Fast Food Getting Healthier? Here's What We Found</a></div>
+                        <div class="blmeta"><span><i class="fas fa-user"></i>Sarah Grain</span><span><i class="fas fa-comment"></i>18 Comments</span></div>
+                        <a href="#" class="blmore">Read More <i class="fas fa-arrow-right"></i></a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+                  <div class="blcard">
+                     <div class="blimg">
+                        <img src="img/blog/3.jpg" alt=""/>
+                        <div class="bldatebdg"><span class="bd">05</span><span class="bm">Jan</span></div>
+                     </div>
+                     <div class="blbody">
+                        <div class="bltag">Recipes</div>
+                        <div class="bltit"><a href="#">Innovative Hot Chickpeas Flake Crackin' Recipe at Home</a></div>
+                        <div class="blmeta"><span><i class="fas fa-user"></i>Chef Marcus</span><span><i class="fas fa-comment"></i>32 Comments</span></div>
+                        <a href="#" class="blmore">Read More <i class="fas fa-arrow-right"></i></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section> -->
+	  
+      <!-- NEWSLETTER -->
+      <!-- <section id="newsletter">
+         <div class="nlbg"></div>
+         <div class="container">
+            <div class="nlw text-center" data-aos="zoom-in">
+               <span class="slbl" style="color:rgba(255,255,255,.7);">Stay Connected</span>
+               <h2 class="mb-3" style="color:#fff;">Subscribe &amp; Get Exclusive <span style="color:var(--secondary);">Deals</span></h2>
+               <p class="mb-4" style="color:rgba(255,255,255,.78);">Get 15% off your first order plus early access to new menu items</p>
+               <div class="nl-form-wrap">
+                  <input class="nlinput" type="email" id="nlEmail" placeholder="Enter your email address..."/>
+                  <button class="nlbtn" id="nlBtn"><i class="fas fa-paper-plane me-1"></i>Subscribe</button>
+               </div>
+               <p style="color:rgba(255,255,255,.45);font-size:.76rem;margin-top:11px;"><i class="fas fa-lock me-1"></i>No spam, unsubscribe anytime.</p>
+            </div>
+         </div>
+      </section> -->
 	  
       <!-- ============================================================
          FIX 6 � CONTACT FORM
