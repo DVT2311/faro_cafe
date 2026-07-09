@@ -22,6 +22,12 @@ body {
   color: #444;
   background: #fff;
   overflow-x: hidden;
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out;
+}
+/* Class này sẽ được JS thêm vào khi đã load xong layout */
+body.layout-loaded {
+    opacity: 1;
 }
 h1,
 h2,
@@ -204,6 +210,7 @@ img {
   box-shadow: 0 8px 22px rgba(232, 40, 26, 0.4);
 }
 
+
 /* ===================== SECTION COMMONS ===================== */
 section {
   padding: 88px 0;
@@ -259,6 +266,96 @@ section {
   transform: translateY(-3px);
   box-shadow: 0 14px 34px rgba(232, 40, 26, 0.45);
   color: #fff;
+}
+
+/* ============================================================
+   TÙY BIẾN DROPDOWN MENU CHO MULTI-PAGE WEBSITE (FARO CAFE)
+   ============================================================ */
+
+/* 1. Phong cách hóa menu cha và loại bỏ icon mũi tên mặc định của Bootstrap */
+.navbar-nav .dropdown-toggle::after {
+   display: none !important; /* Ẩn mũi tên thô mặc định */
+}
+.navbar-nav .dropdown-toggle .style-arrow {
+   font-size: 0.75rem;
+   transition: transform 0.3s ease;
+}
+
+/* 2. Tạo hiệu ứng xoay nhẹ mũi tên khi Menu mở ra */
+.nav-item.dropdown:hover .style-arrow,
+.nav-item.dropdown.show .style-arrow {
+   transform: rotate(180deg);
+}
+
+/* 3. Định hình menu con thả xuống trên Desktop */
+@media (min-width: 992px) {
+   .navbar-nav .dropdown-menu {
+      display: block;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      background-color: var(--dark, #111111); /* Sử dụng nền tối đồng bộ Faro */
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 8px 0;
+      min-width: 230px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+   }
+
+   /* Rê chuột tự động thả menu xuống mượt mà không cần click */
+   .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+   }
+}
+
+/* 4. Định hình các item con bên trong Dropdown */
+.navbar-nav .dropdown-item {
+   color: rgba(255, 255, 255, 0.75) !important;
+   font-size: 0.9rem;
+   padding: 10px 20px;
+   font-weight: 500;
+   transition: all 0.2s ease;
+   display: flex;
+   align-items: center;
+}
+
+.navbar-nav .dropdown-item i {
+   color: var(--primary, #e8281a); /* Icon phụ mang sắc đỏ thương hiệu */
+   font-size: 0.85rem;
+}
+
+/* Hiệu ứng di chuột vào item con */
+.navbar-nav .dropdown-item:hover {
+   background-color: rgba(232, 40, 26, 0.1) !important; /* Nền đỏ mờ nhẹ */
+   color: #ffffff !important;
+   padding-left: 24px; /* Đẩy nhẹ chữ sang phải tạo cảm giác động */
+}
+
+/* Trang hiện tại trong danh mục thả xuống (Active Class) */
+.navbar-nav .dropdown-item.active {
+   background-color: var(--primary, #e8281a) !important;
+   color: #ffffff !important;
+}
+
+/* 5. Tối ưu hiển thị cho Giao diện Mobile (Dưới 991px) */
+@media (max-width: 991px) {
+   .navbar-nav .dropdown-menu {
+      background-color: rgba(255, 255, 255, 0.03) !important;
+      border: none !important;
+      border-left: 2px solid var(--primary, #e8281a) !important; /* Vạch đỏ bên trái để phân biệt menu con */
+      border-radius: 0 !important;
+      margin-left: 15px !important;
+      margin-top: 5px !important;
+      padding-left: 5px !important;
+      box-shadow: none !important;
+   }
+   
+   .navbar-nav .dropdown-item {
+      padding: 8px 15px !important;
+   }
 }
 
 /* ===================== HERO ===================== */
@@ -1200,71 +1297,7 @@ section {
   color: #aaa;
 }
 
-/* ===================== RESERVATION â€” FIX 5 ===================== */
-#reservation {
-  background: var(--light);
-}
-.resico {
-  width: 54px;
-  height: 54px;
-  border-radius: 13px;
-  background: rgba(232, 40, 26, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--primary);
-  font-size: 1.25rem;
-  flex-shrink: 0;
-}
-.flbl {
-  font-size: 0.83rem;
-  font-weight: 600;
-  color: var(--dark);
-  margin-bottom: 5px;
-  display: block;
-}
-.fctrl {
-  width: 100%;
-  border: 2px solid #eee;
-  border-radius: 9px;
-  padding: 11px 15px;
-  font-family: "Poppins", sans-serif;
-  font-size: 0.88rem;
-  outline: none;
-  transition: 0.3s;
-  color: var(--dark);
-  background: #fff;
-  appearance: auto;
-}
-.fctrl:focus {
-  border-color: var(--primary);
-}
-.fcard {
-  background: #fff;
-  border-radius: 18px;
-  padding: 32px;
-  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.08);
-}
-.sucmsg {
-  display: none;
-  text-align: center;
-  padding: 16px;
-  background: rgba(45, 106, 79, 0.07);
-  border-radius: 11px;
-  margin-top: 14px;
-}
-.sucmsg i {
-  color: var(--green);
-  font-size: 1.7rem;
-  display: block;
-  margin-bottom: 7px;
-}
-.sucmsg p {
-  color: var(--green);
-  font-weight: 600;
-  margin: 0;
-  font-size: 0.88rem;
-}
+
 
 /* ===================== NEWSLETTER ===================== */
 #newsletter {
@@ -1288,76 +1321,7 @@ section {
   font-size: 2.1rem;
 }
 
-/* ===================== CONTACT â€” FIX 6 ===================== */
-#contact-section {
-  background: #fff;
-}
-.ctdark {
-  background: var(--dark);
-  border-radius: 18px;
-  padding: 38px;
-  height: 100%;
-}
-.ctdark h4 {
-  color: #fff;
-  margin-bottom: 7px;
-}
-.ctdark .ctsub {
-  color: rgba(255, 255, 255, 0.58);
-  font-size: 0.88rem;
-  margin-bottom: 26px;
-}
-.ctitem {
-  display: flex;
-  gap: 13px;
-  margin-bottom: 20px;
-  align-items: flex-start;
-}
-.cticon {
-  width: 40px;
-  height: 40px;
-  border-radius: 9px;
-  background: rgba(232, 40, 26, 0.18);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--primary);
-  font-size: 0.9rem;
-  flex-shrink: 0;
-}
-.ctinfo strong {
-  display: block;
-  color: #aaa;
-  font-size: 0.73rem;
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-  margin-bottom: 1px;
-  font-family: "Poppins", sans-serif;
-}
-.ctinfo span {
-  color: #fff;
-  font-size: 0.87rem;
-}
-.ctsocrow {
-  display: flex;
-  gap: 8px;
-  margin-top: 14px;
-}
-.ctsocrow a {
-  width: 35px;
-  height: 35px;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.09);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #bbb;
-  transition: 0.3s;
-}
-.ctsocrow a:hover {
-  background: var(--primary);
-  color: #fff;
-}
+
 
 /* ===================== FOOTER ===================== */
 footer {

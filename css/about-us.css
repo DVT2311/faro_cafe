@@ -1,0 +1,86 @@
+
+/* ==========================================
+   FARO CAFE - ABOUT US STYLESHEET
+========================================== */
+
+/* Font Headings & Typography */
+.about-page-wrapper .font-heading {
+    font-family: 'Playfair Display', serif;
+}
+
+.about-page-wrapper p, 
+.about-page-wrapper li {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Utilities helpers */
+.about-page-wrapper .tracking-wider { 
+    letter-spacing: 0.12em; 
+}
+
+.about-page-wrapper .tracking-wide { 
+    letter-spacing: 0.06em; 
+}
+
+.about-page-wrapper .leading-relaxed { 
+    line-height: 1.75; 
+}
+
+.about-page-wrapper .text-sm {
+    font-size: 0.85rem;
+}
+
+.about-page-wrapper .object-fit-cover { 
+    object-fit: cover; 
+}
+
+/* Hero Section Custom Dimensions */
+.about-hero {
+    min-height: 380px;
+}
+
+/* Hover effect cho các thẻ giá trị cốt lõi */
+.hover-translate-y {
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+}
+
+.hover-translate-y:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Hiệu ứng zoom nhẹ đối với hình ảnh khi rê chuột qua */
+.img-hover-effect {
+    transition: transform 0.5s ease;
+}
+
+.img-hover-effect:hover {
+    transform: scale(1.03);
+}
+
+/* Định dạng khối trích dẫn câu chuyện thương hiệu */
+.italic-quote {
+    background-color: rgba(255, 193, 7, 0.04);
+    padding: 12px 0 12px 20px;
+}
+
+/* Tiện ích danh bạ & danh sách tùy chỉnh */
+.custom-list li i {
+    font-size: 0.95rem;
+    vertical-align: middle;
+}
+
+/* Cấu trúc phần con số thống kê */
+.stats-section {
+    background-attachment: scroll;
+}
+
+@media (min-width: 992px) {
+    .stats-section {
+        background-attachment: fixed; /* Tạo hiệu ứng Parallax nhẹ trên Desktop máy tính */
+    }
+}
+
+.stat-item h3 {
+    font-size: 2.75rem;
+}

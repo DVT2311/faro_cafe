@@ -1,0 +1,253 @@
+/* --- Tinh chỉnh màu sắc đồng bộ với giao diện ảnh mẫu và thương hiệu Faro --- */
+:root {
+    --faro-brown: #795548;           /* Tone màu trầm ấm đặc trưng */
+    --faro-dark-red: #a82315;        /* Đỏ sẫm giống màu nút "Gửi yêu cầu đặt tiệc" */
+    --faro-bg-soft: #faf7f2;         /* Màu nền tổng thể trang chi tiết */
+    --faro-border: #e6e0d5;
+    --faro-text-dark: #2c2520;
+    --faro-text-muted: #7d756f;
+}
+
+/* Toàn bộ vùng bao bọc trang chi tiết việc làm */
+.job-detail-wrapper {
+    background-color: var(--faro-bg-soft);
+    padding-bottom: 50px;
+    color: var(--faro-text-dark);
+}
+
+/* Định vị giới hạn chiều rộng trang tương đương container tổng của web */
+.container-custom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* --- Breadcrumb Tuyển Dụng --- */
+.breadcrumb-container {
+    background-color: #ffffff;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--faro-border);
+}
+.job-breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+}
+.job-breadcrumb li + li:before {
+    content: "/\00a0";
+    padding: 0 10px;
+    color: #cbd5e1;
+}
+.job-breadcrumb a {
+    color: var(--faro-text-muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+.job-breadcrumb a:hover {
+    color: var(--faro-brown);
+}
+.job-breadcrumb .active {
+    color: var(--faro-text-dark);
+    font-weight: 500;
+}
+
+/* --- Các hộp khối nội dung (Cột trái) --- */
+.job-card-box {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(121, 85, 72, 0.08);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
+}
+
+.job-badge-status {
+    background-color: #fff3e0;
+    color: #e65100;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 50px;
+    letter-spacing: 0.5px;
+}
+
+.job-main-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--faro-text-dark);
+}
+
+.job-meta-list {
+    font-size: 14px;
+    color: var(--faro-text-muted);
+}
+.job-meta-list i {
+    color: var(--faro-brown);
+    margin-right: 4px;
+}
+
+.section-block-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.section-block-title i {
+    color: var(--faro-brown);
+    font-size: 18px;
+}
+
+/* Danh sách mô tả dạng list chuẩn TopCV */
+.job-content-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+.job-content-list li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 12px;
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: #443e3a;
+}
+.job-content-list li:last-child {
+    margin-bottom: 0;
+}
+.job-content-list li::before {
+    content: "•";
+    color: var(--faro-brown);
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    left: 4px;
+    top: -3px;
+}
+
+/* --- Thiết lập STICKY SIDEBAR (Cột phải cố định) --- */
+@media (min-width: 992px) {
+    .job-sticky-sidebar {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 90px; /* Khoảng cách an toàn để tránh đè lên Header động khi cuộn xuống */
+        z-index: 10;
+    }
+}
+
+/* Hộp Form đăng ký ứng tuyển thiết kế chuẩn mẫu */
+.application-form-box {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+.form-box-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--faro-text-dark);
+    margin-bottom: 4px;
+}
+.form-box-subtitle {
+    font-size: 12.5px;
+    color: var(--faro-text-muted);
+}
+
+/* Form inputs & Label */
+.form-custom-label {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--faro-text-dark);
+    margin-bottom: 6px;
+    display: block;
+}
+
+.custom-input {
+    border: 1px solid #cbd5e1;
+    border-radius: 8px !important;
+    padding: 10px 14px;
+    font-size: 13.5px;
+    color: var(--faro-text-dark);
+    background-color: #ffffff;
+    transition: all 0.2s ease;
+}
+.custom-input:focus {
+    border-color: var(--faro-brown);
+    box-shadow: 0 0 0 3px rgba(121, 85, 72, 0.15);
+    background-color: #ffffff;
+}
+
+/* Khung kéo thả CV nâng cao */
+.custom-file-upload {
+    position: relative;
+    border: 2px dashed #cbd5e1;
+    background-color: #f8fafc;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.custom-file-upload:hover {
+    background-color: #f1f5f9;
+    border-color: var(--faro-brown);
+}
+.custom-file-upload i {
+    font-size: 22px;
+    color: var(--faro-text-muted);
+}
+.upload-text {
+    font-size: 12.5px;
+    font-weight: 500;
+    color: var(--faro-text-dark);
+}
+.upload-hint {
+    font-size: 11px;
+    color: var(--faro-text-muted);
+}
+.hidden-file-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Nút bấm Đổ bóng mờ Gradient Đỏ sẫm như mẫu ảnh gửi */
+.btn-submit-faro {
+    background: linear-gradient(135deg, var(--faro-brown) 0%, var(--faro-dark-red) 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 14.5px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 20px rgba(168, 35, 21, 0.25);
+    transition: all 0.2s ease;
+}
+.btn-submit-faro:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(168, 35, 21, 0.35);
+    color: #ffffff;
+}
+.btn-submit-faro:active {
+    transform: translateY(0);
+}

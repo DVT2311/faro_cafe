@@ -1,0 +1,572 @@
+/* ==========================================================================
+   CSS DÀNH RIÊNG CHO TRANG TUYỂN DỤNG FARO CAFE (DANH SÁCH & CHI TIẾT)
+   ========================================================================== */
+
+/* --- 1. Hệ thống Nút bấm (Buttons) --- */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    text-align: center;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--secondary);
+    color: #FFFFFF;
+    box-shadow: 0 4px 12px rgba(246, 166, 35, 0.2);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary);
+    color: #FFFFFF;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary);
+    color: #FFFFFF;
+    transform: translateY(-2px);
+}
+
+/* --- 2. Các thành phần chung của trang --- */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-header h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--secondary);
+    margin: 10px auto 0 auto;
+}
+
+.section-header p {
+    color: #666;
+    font-size: 1.05rem;
+}
+
+/* --- 3. Phần Giao diện Danh sách Việc làm (Trang chủ Tuyển dụng) --- */
+/* --- Khối Hero Base (Chuyển sang cấu trúc relative) --- */
+.hero {
+    position: relative;
+    padding: 140px 0;
+    color: #FFFFFF;
+    text-align: center;
+    overflow: hidden; /* Đảm bảo ảnh không tràn ra ngoài */
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+}
+
+/* Lớp nội dung chữ đẩy lên trên cùng */
+.hero-content {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+}
+
+.hero h1 {
+    color: #FFFFFF !important;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: var(--secondary);
+}
+
+.hero p {
+    font-size: 1.15rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Khối Layer Slideshow Ảnh Nền --- */
+.hero-slideshow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-slideshow .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-no-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 0;
+    transform: scale(1.05); /* Hiệu ứng zoom nhẹ tạo cảm giác cinematic */
+    animation: faderEffect 15s infinite ease-in-out; /* Tổng thời gian chạy vòng lặp 3 ảnh là 15 giây */
+}
+
+/* Lớp phủ màu tối đồng nhất đè lên tất cả ảnh nền */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 26, 26, 0.75); /* Độ mờ đen giúp chữ dễ đọc */
+    z-index: 2;
+}
+
+/* --- Chia mốc thời gian hiển thị (Giữ ảnh 4s, chuyển ảnh trong 1s) --- */
+.hero-slideshow .slide:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.hero-slideshow .slide:nth-child(2) {
+    animation-delay: 5s;
+}
+
+.hero-slideshow .slide:nth-child(3) {
+    animation-delay: 10s;
+}
+
+/* --- Tạo hiệu ứng chuyển ảnh Smooth (Fade In - Out & Zoom) --- */
+@keyframes faderEffect {
+    0% {
+        opacity: 0;
+        transform: scale(1.05);
+    }
+    6% { /* Bắt đầu hiện rõ */
+        opacity: 1;
+    }
+    33.33% { /* Giữ nguyên độ hiển thị */
+        opacity: 1;
+    }
+    40% { /* Mờ dần để nhường chỗ cho ảnh kế tiếp */
+        opacity: 0;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.hero h1 {
+    color: #FFFFFF !important;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: var(--secondary);
+}
+
+.hero p {
+    font-size: 1.15rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Khối văn hóa Faro */
+.values {
+    padding: 80px 0;
+    background-color: var(--light);
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.value-card {
+    background-color: #FFFFFF;
+    padding: 40px 30px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+}
+
+.value-card i {
+    font-size: 2.5rem;
+    color: var(--secondary);
+    margin-bottom: 20px;
+}
+
+.value-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.value-card p {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* Khối danh sách các vị trí */
+.jobs {
+    padding: 80px 0;
+}
+
+.category-title {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin: 40px 0 20px 0;
+    border-bottom: 2px solid var(--cream2);
+    padding-bottom: 10px;
+}
+
+.category-title i {
+    margin-right: 10px;
+    color: var(--secondary);
+}
+
+.jobs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+/* Tích hợp responsive: Trên màn hình máy tính bảng nhỏ và điện thoại sẽ chuyển về 1 cột */
+@media (max-width: 768px) {
+    .jobs-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+.job-card {
+    background-color: #FFFFFF;
+    border: 1px solid var(--cream2);
+    padding: 30px;
+    border-radius: 12px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+.job-card:hover {
+    box-shadow: var(--shadow);
+    border-color: var(--primary);
+}
+
+.job-badge {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.badge-fulltime {
+    background-color: #e8f5e9;
+    color: var(--green);
+}
+
+.badge-parttime {
+    background-color: var(--cream2);
+    color: var(--primary);
+}
+
+.job-card h4 {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+    padding-right: 80px;
+}
+
+.job-location {
+    font-size: 0.85rem;
+    color: var(--primary);
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.job-desc {
+    color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+
+/* --- 4. Phần Giao diện Trang Chi tiết Việc làm --- */
+.job-detail-header {
+    background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+    color: #FFFFFF;
+    padding: 60px 0 90px 0;
+}
+
+.job-detail-header h1 {
+    color: #FFFFFF !important;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+.back-link {
+    color: var(--cream2);
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 30px;
+}
+
+.back-link:hover {
+    color: var(--secondary);
+}
+
+.job-meta-tags {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.job-meta-tags span {
+    font-size: 0.88rem;
+    font-weight: 500;
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 8px 18px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--light);
+}
+
+.job-meta-tags span i {
+    color: var(--secondary);
+}
+
+/* Bố cục 2 cột nội dung trang chi tiết */
+.job-detail-container {
+    display: grid;
+    grid-template-columns: 7fr 4fr;
+    gap: 40px;
+    margin-top: -50px;
+    margin-bottom: 80px;
+}
+
+.job-description {
+    background-color: #FFFFFF;
+    padding: 45px;
+    border-radius: 16px;
+    border: 1px solid var(--cream2);
+    box-shadow: var(--shadow);
+}
+
+.desc-section {
+    margin-bottom: 40px;
+}
+
+.desc-section:last-child {
+    margin-bottom: 0;
+}
+
+.desc-section h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.desc-section h3 i {
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+
+.desc-section ul {
+    list-style: none;
+}
+
+.desc-section ul li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 14px;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* Custom Bullet tròn nhỏ màu nâu gỗ thương hiệu của bạn */
+.desc-section ul li::before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 10px;
+    width: 6px;
+    height: 6px;
+    background-color: var(--primary);
+    border-radius: 50%;
+}
+
+
+/* --- 5. Khối Form Ứng Tuyển Nhanh --- */
+.apply-sidebar {
+    position: sticky;
+    top: 120px; /* Neo giữ form khi cuộn mà không đè thanh menu gốc */
+    height: fit-content;
+}
+
+.apply-card {
+    background-color: var(--cream);
+    border: 1px solid var(--cream2);
+    padding: 35px 30px;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+}
+
+.apply-card h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.apply-card p {
+    color: #555555;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #D5C7B7;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    background-color: #FFFFFF;
+    color: var(--dark);
+    transition: all 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(131, 93, 50, 0.15);
+}
+
+.form-group input[type="file"] {
+    display: block;
+    width: 100%;
+    font-size: 0.9rem;
+    color: #666666;
+    background: #FFFFFF;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px dashed #D5C7B7;
+    cursor: pointer;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+
+/* --- 6. Cấu trúc Responsive cho thiết bị di động --- */
+@media (max-width: 992px) {
+    .job-detail-container {
+        grid-template-columns: 1fr;
+        margin-top: 20px;
+        gap: 30px;
+    }
+    
+    .job-description {
+        padding: 30px 20px;
+    }
+    
+    .job-header-main h1 {
+        font-size: 2rem;
+    }
+    
+    .apply-sidebar {
+        position: static;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    .hero {
+        padding: 100px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .job-meta-tags {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

@@ -6,19 +6,12 @@ AOS.init({
 
 /* NAVBAR SCROLL & ACTIVE LINK  */
 window.addEventListener('scroll', function() {
-    document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 60);
-    document.getElementById('btt').classList.toggle('show', window.scrollY > 300);
-    document.querySelectorAll('section[id]').forEach(function(sec) {
-        var top = sec.offsetTop - 110,
-            bot = top + sec.offsetHeight;
-        if (window.scrollY >= top && window.scrollY < bot) {
-            document.querySelectorAll('.nav-link').forEach(function(l) {
-                l.classList.remove('active');
-            });
-            var lnk = document.querySelector('.nav-link[href="#' + sec.id + '"]');
-            if (lnk) lnk.classList.add('active');
-        }
-    });
+    // Xử lý ẩn/hiển thị nút Back to top (btt)
+    const bttElement = document.getElementById('btt');
+    if (bttElement) {
+        bttElement.classList.toggle('show', window.scrollY > 300);
+    }
+
 });
 
 /*  SMOOTH SCROLL + MOBILE NAV CLOSE  */
@@ -51,27 +44,31 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a) {
 });
 
 
-var searchOv = document.getElementById('searchOv');
+/* ============================================================
+   LANGUAGE POPUP OVERLAY HANDLING (Ủy quyền sự kiện động)
+   ============================================================ */
+document.addEventListener('click', function(e) {
+    const searchOverlay = document.getElementById('searchOv');
+    if (!searchOverlay) return; // Nếu trang hiện tại không có popup, bỏ qua không xử lý
 
-document.getElementById('navSearchBtn').addEventListener('click', function() {
-    searchOv.classList.add('open');
-    document.body.style.overflow = 'hidden';
-    setTimeout(function() {
-        document.getElementById('searchInput').focus();
-    }, 220);
+    // 1. Nếu click trúng nút Quả cầu (hoặc icon bên trong nút) -> MỞ POPUP
+    if (e.target.closest('#navSearchBtn')) {
+        e.preventDefault();
+        searchOverlay.classList.add('open'); // Hoặc style.display = 'block' tùy thuộc vào CSS cũ của bạn
+        // Nếu CSS của bạn dùng class active để hiện popup thì sửa thành: searchOverlay.classList.add('active');
+    }
+
+    // 2. Nếu click trúng nút Close (X) (hoặc icon dấu X bên trong) -> ĐÓNG POPUP
+    if (e.target.closest('#searchClose')) {
+        searchOverlay.classList.remove('open'); // Hoặc style.display = 'none'
+        // Đồng bộ theo CSS cũ của bạn: searchOverlay.classList.remove('active');
+    }
+    
+    // 3. (Tùy chọn thêm) Nếu click trúng vùng đen bên ngoài cái hộp chọn -> ĐÓNG POPUP cho thân thiện
+    if (e.target === searchOverlay) {
+        searchOverlay.classList.remove('open');
+    }
 });
-
-document.getElementById('searchClose').addEventListener('click', closeSearch);
-
-// Close when clicking backdrop
-searchOv.addEventListener('click', function(e) {
-    if (e.target === searchOv) closeSearch();
-});
-
-function closeSearch() {
-    searchOv.classList.remove('open');
-    document.body.style.overflow = '';
-}
 
 // Thay đổi trạng thái active khi chọn Ngôn ngữ và đóng bảng chọn
 document.querySelectorAll('.sovcat').forEach(function(btn) {
@@ -170,7 +167,6 @@ document.querySelectorAll('.catcard').forEach(function(card) {
 
 
 var menuPop = document.getElementById('menuPop');
-var mpQty = 1;
 
 function openMenuPop(card) {
     var img = card.getAttribute('data-img');
@@ -189,32 +185,32 @@ function openMenuPop(card) {
     document.getElementById('mpCat').textContent = cat;
     document.getElementById('mpTitle').textContent = title;
 
+    // Tính toán số sao hiển thị (Sửa lỗi ký tự ngôi sao rỗng)
     var full = Math.round(rating),
         empty = 5 - full;
     document.getElementById('mpStars').innerHTML =
-        '<i class="fas fa-star"></i>'.repeat(full) + 'â˜†'.repeat(empty) +
-        ' <span style="color:#bbb;font-size:.78rem;">' + rating + ' (' + reviews + ' reviews)</span>';
+        '<i class="fas fa-star"></i>'.repeat(full) + '☆'.repeat(empty) +
+        ' <span style="color:#bbb;font-size:.78rem;">' + rating + ' (' + reviews + ' đánh giá)</span>';
 
     document.getElementById('mpDesc').textContent = desc;
 
+    // Hiển thị giá và giá cũ nếu có
     document.getElementById('mpPrice').innerHTML =
         price + (old ? '<small style="color:#ccc;text-decoration:line-through;margin-left:8px;font-size:1rem;">' + old + '</small>' : '');
 
+    // Hiển thị thông tin Meta cơ bản
     document.getElementById('mpMeta').innerHTML =
         '<div class="mpm"><div class="mpmv">' + cal + ' kcal</div><div class="mpml">Calories</div></div>' +
-        '<div class="mpm"><div class="mpmv">' + time + ' min</div><div class="mpml">Prep Time</div></div>' +
-        '<div class="mpm"><div class="mpmv">' + rating + '/5</div><div class="mpml">Rating</div></div>';
+        '<div class="mpm"><div class="mpmv">' + time + ' phút</div><div class="mpml">Chuẩn bị</div></div>' +
+        '<div class="mpm"><div class="mpmv">' + rating + '/5</div><div class="mpml">Đánh giá</div></div>';
 
+    // Hiển thị Tags
     document.getElementById('mpTags').innerHTML =
         tags.split(',').filter(Boolean).map(function(t) {
             return '<span class="mptag">' + t.trim() + '</span>';
         }).join('');
 
-    mpQty = 1;
-    document.getElementById('mpQnum').textContent = 1;
-    document.getElementById('mpAddCart').innerHTML = '<i class="fas fa-shopping-cart"></i> Add to Cart';
-    document.getElementById('mpAddCart').style.background = '';
-
+    // Mở popup
     menuPop.classList.add('open');
     document.body.style.overflow = 'hidden';
 }
@@ -257,60 +253,60 @@ function closeMenuPop() {
 }
 
 // Qty +/-
-document.getElementById('mpPlus').addEventListener('click', function() {
-    document.getElementById('mpQnum').textContent = ++mpQty;
-});
-document.getElementById('mpMinus').addEventListener('click', function() {
-    if (mpQty > 1) document.getElementById('mpQnum').textContent = --mpQty;
-});
+// document.getElementById('mpPlus').addEventListener('click', function() {
+//     document.getElementById('mpQnum').textContent = ++mpQty;
+// });
+// document.getElementById('mpMinus').addEventListener('click', function() {
+//     if (mpQty > 1) document.getElementById('mpQnum').textContent = --mpQty;
+// });
 
 // Add to cart button
-document.getElementById('mpAddCart').addEventListener('click', function() {
-    var cnt = parseInt(document.getElementById('cartCount').textContent) + mpQty;
-    document.getElementById('cartCount').textContent = cnt;
-    this.innerHTML = '<i class="fas fa-check"></i> Added to Cart!';
-    this.style.background = 'linear-gradient(135deg,var(--green),#1a4a35)';
-    var self = this;
-    setTimeout(function() {
-        closeMenuPop();
-        self.innerHTML = '<i class="fas fa-shopping-cart"></i> Add to Cart';
-        self.style.background = '';
-    }, 1000);
-});
+// document.getElementById('mpAddCart').addEventListener('click', function() {
+//     var cnt = parseInt(document.getElementById('cartCount').textContent) + mpQty;
+//     document.getElementById('cartCount').textContent = cnt;
+//     this.innerHTML = '<i class="fas fa-check"></i> Added to Cart!';
+//     this.style.background = 'linear-gradient(135deg,var(--green),#1a4a35)';
+//     var self = this;
+//     setTimeout(function() {
+//         closeMenuPop();
+//         self.innerHTML = '<i class="fas fa-shopping-cart"></i> Add to Cart';
+//         self.style.background = '';
+//     }, 1000);
+// });
 
 
-document.getElementById('resBtn').addEventListener('click', function() {
-    var btn = this;
-    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Booking...';
-    btn.disabled = true;
-    setTimeout(function() {
-        btn.innerHTML = '<i class="fas fa-calendar-check"></i> Confirm Reservation';
-        btn.disabled = false;
-        var ok = document.getElementById('resOk');
-        ok.style.display = 'block';
-        ok.scrollIntoView({
-            behavior: 'smooth',
-            block: 'nearest'
-        });
-    }, 1500);
-});
+// document.getElementById('resBtn').addEventListener('click', function() {
+//     var btn = this;
+//     btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Booking...';
+//     btn.disabled = true;
+//     setTimeout(function() {
+//         btn.innerHTML = '<i class="fas fa-calendar-check"></i> Confirm Reservation';
+//         btn.disabled = false;
+//         var ok = document.getElementById('resOk');
+//         ok.style.display = 'block';
+//         ok.scrollIntoView({
+//             behavior: 'smooth',
+//             block: 'nearest'
+//         });
+//     }, 1500);
+// });
 
 
-document.getElementById('ctcBtn').addEventListener('click', function() {
-    var btn = this;
-    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-    btn.disabled = true;
-    setTimeout(function() {
-        btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
-        btn.disabled = false;
-        var ok = document.getElementById('ctcOk');
-        ok.style.display = 'block';
-        ok.scrollIntoView({
-            behavior: 'smooth',
-            block: 'nearest'
-        });
-    }, 1500);
-});
+// document.getElementById('ctcBtn').addEventListener('click', function() {
+//     var btn = this;
+//     btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+//     btn.disabled = true;
+//     setTimeout(function() {
+//         btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+//         btn.disabled = false;
+//         var ok = document.getElementById('ctcOk');
+//         ok.style.display = 'block';
+//         ok.scrollIntoView({
+//             behavior: 'smooth',
+//             block: 'nearest'
+//         });
+//     }, 1500);
+// });
 
 
 var galPop = document.getElementById('galPop');
@@ -366,29 +362,6 @@ document.addEventListener('keydown', function(e) {
 });
 
 
-new Swiper('.tesSwiper', {
-    slidesPerView: 1,
-    spaceBetween: 22,
-    loop: true,
-    autoplay: {
-        delay: 4000,
-        disableOnInteraction: false
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true
-    },
-    breakpoints: {
-        640: {
-            slidesPerView: 2
-        },
-        1024: {
-            slidesPerView: 3
-        }
-    }
-});
-
-
 var cH = 8,
     cM = 45,
     cS = 30;
@@ -412,22 +385,6 @@ setInterval(function() {
     document.getElementById('cdS').textContent = String(cS).padStart(2, '0');
 }, 1000);
 
-/* â”€â”€ NEWSLETTER â”€â”€ */
-// document.getElementById('nlBtn').addEventListener('click', function() {
-//     var email = document.getElementById('nlEmail').value;
-//     if (email && email.includes('@')) {
-//         var btn = this;
-//         btn.textContent = 'âœ“ Subscribed!';
-//         btn.style.background = '#4ade80';
-//         btn.style.color = '#222';
-//         document.getElementById('nlEmail').value = '';
-//         setTimeout(function() {
-//             btn.textContent = 'Subscribe';
-//             btn.style.background = '';
-//             btn.style.color = '';
-//         }, 3000);
-//     }
-// });
 
 /*  NUMBER COUNTER ANIMATION*/
 var numAnimated = false;
@@ -473,19 +430,6 @@ jQuery(document).ready(function($) {
     }
 });
 
-// Khởi tạo Swiper Slide cho phần Giới thiệu (About)
-const aboutSwiper = new Swiper('.aboutSwiper', {
-  loop: true,               // Chạy lặp lại vô hạn
-  autoplay: {
-    delay: 3000,            // Tự động chuyển hình sau 3 giây
-    disableOnInteraction: false,
-  },
-  effect: 'fade',           // Hiệu ứng mờ dần sang trọng (thay vì lướt ngang cục mịch)
-  fadeEffect: {
-    crossFade: true
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,        // Cho phép click vào dấu chấm để chuyển hình
-  },
-});
+
+
+

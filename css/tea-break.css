@@ -1,0 +1,104 @@
+/* ==========================================================
+   RESERVATION - FARO COFFEE
+   ========================================================== */
+
+#reservation{
+    background:var(--light);
+    padding:100px 0;
+}
+
+/* ===== Icon ===== */
+
+.resico{
+    width:54px;
+    height:54px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:14px;
+
+    background:rgba(131,93,50,.12);
+    color:var(--primary);
+
+    font-size:1.25rem;
+    flex-shrink:0;
+}
+
+/* ===== Form ===== */
+
+.fcard{
+    background:#fff;
+    border-radius:18px;
+    padding:36px;
+    box-shadow:var(--shadow);
+}
+
+.flbl{
+    display:block;
+    margin-bottom:8px;
+
+    color:var(--dark);
+    font-size:.9rem;
+    font-weight:600;
+}
+
+.fctrl{
+    width:100%;
+    padding:13px 16px;
+
+    border:1px solid #ddd;
+    border-radius:10px;
+
+    background:#fff;
+    color:var(--dark);
+
+    font-size:.9rem;
+    font-family:"Poppins",sans-serif;
+
+    transition:.3s;
+    appearance:auto;
+}
+
+.fctrl:focus{
+    outline:none;
+    border-color:var(--primary);
+    box-shadow:0 0 0 4px rgba(131,93,50,.12);
+}
+
+textarea.fctrl{
+    resize:vertical;
+}
+
+/* ===== Success Message ===== */
+
+.sucmsg{
+    display:none;
+
+    margin-top:20px;
+    padding:20px;
+
+    text-align:center;
+
+    background:rgba(45,106,79,.08);
+    border:1px solid rgba(45,106,79,.15);
+    border-radius:12px;
+}
+
+.sucmsg i{
+    display:block;
+
+    margin-bottom:10px;
+
+    color:var(--green);
+    font-size:2rem;
+}
+
+.sucmsg p{
+    margin:0;
+
+    color:var(--green);
+    font-size:.9rem;
+    font-weight:600;
+}

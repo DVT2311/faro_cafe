@@ -1,0 +1,201 @@
+/* ==========================================================
+   CONTACT - FARO COFFEE
+   ========================================================== */
+
+#contact-section{
+    background: var(--light);
+    padding: 100px 0;
+}
+
+/* ===== Left Contact Card ===== */
+
+.ctdark{
+    background: var(--dark);
+    border-radius:18px;
+    padding:40px;
+    height:100%;
+}
+
+.ctdark h4{
+    color:#fff;
+    margin-bottom:8px;
+}
+
+.ctsub{
+    color:rgba(255,255,255,.65);
+    font-size:.9rem;
+    margin-bottom:30px;
+}
+
+.ctitem{
+    display:flex;
+    align-items:flex-start;
+    gap:16px;
+    margin-bottom:24px;
+}
+
+.cticon{
+    width:44px;
+    height:44px;
+    flex-shrink:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:10px;
+
+    background:rgba(232,40,26,.2);
+    color:var(--primary);
+    font-size:1rem;
+}
+
+.ctinfo strong{
+    display:block;
+    margin-bottom:3px;
+
+    color:rgba(255,255,255,.55);
+    font-size:.75rem;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.ctinfo span{
+    color:#fff;
+    font-size:.92rem;
+    line-height:1.6;
+}
+
+/* ===== Social ===== */
+
+.ctsocrow{
+    display:flex;
+    gap:10px;
+    margin-top:30px;
+}
+
+.ctsocrow a{
+    width:40px;
+    height:40px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:10px;
+
+    background:rgba(255,255,255,.08);
+    color:#fff;
+
+    transition:.3s;
+}
+
+.ctsocrow a:hover{
+    background:var(--primary);
+    transform:translateY(-3px);
+}
+
+/* ===== Form Card ===== */
+
+.fcard{
+    position:relative;
+
+    background:#fff;
+    border-radius:18px;
+    padding:40px;
+
+    box-shadow:var(--shadow);
+}
+
+.flbl{
+    display:block;
+    margin-bottom:8px;
+
+    font-size:.9rem;
+    font-weight:600;
+
+    color:var(--dark);
+}
+
+.fctrl{
+    width:100%;
+    padding:13px 16px;
+
+    border:1px solid #ddd;
+    border-radius:10px;
+
+    background:#fff;
+
+    transition:.3s;
+}
+
+.fctrl:focus{
+    outline:none;
+
+    border-color:var(--primary);
+    box-shadow:0 0 0 4px rgba(131,93,50,.12);
+}
+
+/* textarea */
+
+textarea.fctrl{
+    resize:vertical;
+}
+
+/* ===== Button ===== */
+
+.btn-red{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    color:#fff;
+
+    border:none;
+    border-radius:10px;
+
+    padding:14px 30px;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.btn-red:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 14px 34px rgba(232, 40, 26, 0.45);
+  color: #fff;
+}
+
+/* ===== Success Message ===== */
+
+.sucmsg{
+    display:none;
+
+    position:absolute;
+    inset:0;
+
+    background:rgba(255,255,255,.96);
+
+    border-radius:18px;
+
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    padding:30px;
+
+    z-index:20;
+}
+
+.sucmsg i{
+    font-size:3.5rem;
+    color:var(--green);
+    margin-bottom:18px;
+}
+
+.sucmsg p{
+    margin:0;
+    color:#555;
+    max-width:420px;
+}
